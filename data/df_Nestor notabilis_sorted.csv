@@ -1,0 +1,1529 @@
+Species,timeFromHuman_MY,cluster,present
+Latimeria chalumnae,411.9,4221,False
+Latimeria chalumnae,411.9,3638,False
+Latimeria chalumnae,411.9,706,False
+Latimeria chalumnae,411.9,1007,False
+Latimeria chalumnae,411.9,926,False
+Latimeria chalumnae,411.9,9977,False
+Latimeria chalumnae,411.9,9975,False
+Latimeria chalumnae,411.9,9976,False
+Nanorana parkeri,355.7,4221,False
+Nanorana parkeri,355.7,3638,False
+Nanorana parkeri,355.7,706,False
+Nanorana parkeri,355.7,1007,False
+Nanorana parkeri,355.7,926,False
+Nanorana parkeri,355.7,9977,False
+Nanorana parkeri,355.7,9975,False
+Nanorana parkeri,355.7,9976,False
+Xenopus laevi,355.7,4221,False
+Xenopus laevi,355.7,3638,False
+Xenopus laevi,355.7,706,False
+Xenopus laevi,355.7,1007,False
+Xenopus laevi,355.7,926,False
+Xenopus laevi,355.7,9977,False
+Xenopus laevi,355.7,9975,False
+Xenopus laevi,355.7,9976,False
+Xenopus tropicalis,355.7,4221,False
+Xenopus tropicalis,355.7,3638,False
+Xenopus tropicalis,355.7,706,False
+Xenopus tropicalis,355.7,1007,False
+Xenopus tropicalis,355.7,926,False
+Xenopus tropicalis,355.7,9977,False
+Xenopus tropicalis,355.7,9975,False
+Xenopus tropicalis,355.7,9976,False
+Acanthisitta chloris,320.5,4221,False
+Acanthisitta chloris,320.5,3638,True
+Acanthisitta chloris,320.5,706,True
+Acanthisitta chloris,320.5,1007,False
+Acanthisitta chloris,320.5,926,False
+Acanthisitta chloris,320.5,9977,False
+Acanthisitta chloris,320.5,9975,False
+Acanthisitta chloris,320.5,9976,False
+Alligator mississippiensis,320.5,4221,True
+Alligator mississippiensis,320.5,3638,True
+Alligator mississippiensis,320.5,706,False
+Alligator mississippiensis,320.5,1007,False
+Alligator mississippiensis,320.5,926,True
+Alligator mississippiensis,320.5,9977,False
+Alligator mississippiensis,320.5,9975,False
+Alligator mississippiensis,320.5,9976,False
+Alligator sinensis,320.5,4221,True
+Alligator sinensis,320.5,3638,True
+Alligator sinensis,320.5,706,False
+Alligator sinensis,320.5,1007,False
+Alligator sinensis,320.5,926,True
+Alligator sinensis,320.5,9977,False
+Alligator sinensis,320.5,9975,False
+Alligator sinensis,320.5,9976,False
+Amazona vittata,320.5,4221,True
+Amazona vittata,320.5,3638,True
+Amazona vittata,320.5,706,True
+Amazona vittata,320.5,1007,False
+Amazona vittata,320.5,926,True
+Amazona vittata,320.5,9977,False
+Amazona vittata,320.5,9975,False
+Amazona vittata,320.5,9976,False
+Anas platyrhynchos,320.5,4221,True
+Anas platyrhynchos,320.5,3638,True
+Anas platyrhynchos,320.5,706,True
+Anas platyrhynchos,320.5,1007,True
+Anas platyrhynchos,320.5,926,True
+Anas platyrhynchos,320.5,9977,False
+Anas platyrhynchos,320.5,9975,False
+Anas platyrhynchos,320.5,9976,False
+Anolis carolinensis,320.5,4221,True
+Anolis carolinensis,320.5,3638,True
+Anolis carolinensis,320.5,706,False
+Anolis carolinensis,320.5,1007,False
+Anolis carolinensis,320.5,926,True
+Anolis carolinensis,320.5,9977,False
+Anolis carolinensis,320.5,9975,False
+Anolis carolinensis,320.5,9976,False
+Anser cygnoides domesticus,320.5,4221,False
+Anser cygnoides domesticus,320.5,3638,False
+Anser cygnoides domesticus,320.5,706,True
+Anser cygnoides domesticus,320.5,1007,True
+Anser cygnoides domesticus,320.5,926,True
+Anser cygnoides domesticus,320.5,9977,False
+Anser cygnoides domesticus,320.5,9975,False
+Anser cygnoides domesticus,320.5,9976,False
+Antrostomus carolinensis,320.5,4221,True
+Antrostomus carolinensis,320.5,3638,False
+Antrostomus carolinensis,320.5,706,True
+Antrostomus carolinensis,320.5,1007,True
+Antrostomus carolinensis,320.5,926,False
+Antrostomus carolinensis,320.5,9977,False
+Antrostomus carolinensis,320.5,9975,False
+Antrostomus carolinensis,320.5,9976,False
+Apalone spinifera,320.5,4221,False
+Apalone spinifera,320.5,3638,True
+Apalone spinifera,320.5,706,True
+Apalone spinifera,320.5,1007,False
+Apalone spinifera,320.5,926,False
+Apalone spinifera,320.5,9977,False
+Apalone spinifera,320.5,9975,False
+Apalone spinifera,320.5,9976,False
+Aptenodytes forsteri,320.5,4221,True
+Aptenodytes forsteri,320.5,3638,True
+Aptenodytes forsteri,320.5,706,True
+Aptenodytes forsteri,320.5,1007,True
+Aptenodytes forsteri,320.5,926,True
+Aptenodytes forsteri,320.5,9977,True
+Aptenodytes forsteri,320.5,9975,False
+Aptenodytes forsteri,320.5,9976,False
+Apteryx australis mantelli,320.5,4221,True
+Apteryx australis mantelli,320.5,3638,True
+Apteryx australis mantelli,320.5,706,True
+Apteryx australis mantelli,320.5,1007,True
+Apteryx australis mantelli,320.5,926,True
+Apteryx australis mantelli,320.5,9977,True
+Apteryx australis mantelli,320.5,9975,False
+Apteryx australis mantelli,320.5,9976,False
+Aquila chrysaetos,320.5,4221,True
+Aquila chrysaetos,320.5,3638,True
+Aquila chrysaetos,320.5,706,True
+Aquila chrysaetos,320.5,1007,True
+Aquila chrysaetos,320.5,926,True
+Aquila chrysaetos,320.5,9977,False
+Aquila chrysaetos,320.5,9975,False
+Aquila chrysaetos,320.5,9976,False
+Ara macao,320.5,4221,True
+Ara macao,320.5,3638,True
+Ara macao,320.5,706,True
+Ara macao,320.5,1007,False
+Ara macao,320.5,926,True
+Ara macao,320.5,9977,False
+Ara macao,320.5,9975,False
+Ara macao,320.5,9976,False
+Balearica regulorum gibbericeps,320.5,4221,False
+Balearica regulorum gibbericeps,320.5,3638,True
+Balearica regulorum gibbericeps,320.5,706,True
+Balearica regulorum gibbericeps,320.5,1007,True
+Balearica regulorum gibbericeps,320.5,926,True
+Balearica regulorum gibbericeps,320.5,9977,True
+Balearica regulorum gibbericeps,320.5,9975,False
+Balearica regulorum gibbericeps,320.5,9976,False
+Calypte anna,320.5,4221,True
+Calypte anna,320.5,3638,True
+Calypte anna,320.5,706,False
+Calypte anna,320.5,1007,False
+Calypte anna,320.5,926,False
+Calypte anna,320.5,9977,False
+Calypte anna,320.5,9975,False
+Calypte anna,320.5,9976,False
+Caprimulgus carolinensis,320.5,4221,True
+Caprimulgus carolinensis,320.5,3638,True
+Caprimulgus carolinensis,320.5,706,True
+Caprimulgus carolinensis,320.5,1007,True
+Caprimulgus carolinensis,320.5,926,False
+Caprimulgus carolinensis,320.5,9977,False
+Caprimulgus carolinensis,320.5,9975,False
+Caprimulgus carolinensis,320.5,9976,False
+Cariama cristata,320.5,4221,False
+Cariama cristata,320.5,3638,True
+Cariama cristata,320.5,706,True
+Cariama cristata,320.5,1007,True
+Cariama cristata,320.5,926,False
+Cariama cristata,320.5,9977,False
+Cariama cristata,320.5,9975,False
+Cariama cristata,320.5,9976,False
+Cathartes aura,320.5,4221,True
+Cathartes aura,320.5,3638,True
+Cathartes aura,320.5,706,True
+Cathartes aura,320.5,1007,True
+Cathartes aura,320.5,926,False
+Cathartes aura,320.5,9977,False
+Cathartes aura,320.5,9975,False
+Cathartes aura,320.5,9976,False
+Chaetura pelagica,320.5,4221,True
+Chaetura pelagica,320.5,3638,True
+Chaetura pelagica,320.5,706,True
+Chaetura pelagica,320.5,1007,True
+Chaetura pelagica,320.5,926,False
+Chaetura pelagica,320.5,9977,False
+Chaetura pelagica,320.5,9975,False
+Chaetura pelagica,320.5,9976,False
+Charadrius vociferus,320.5,4221,False
+Charadrius vociferus,320.5,3638,True
+Charadrius vociferus,320.5,706,True
+Charadrius vociferus,320.5,1007,True
+Charadrius vociferus,320.5,926,False
+Charadrius vociferus,320.5,9977,True
+Charadrius vociferus,320.5,9975,False
+Charadrius vociferus,320.5,9976,False
+Chelonia mydas,320.5,4221,True
+Chelonia mydas,320.5,3638,True
+Chelonia mydas,320.5,706,True
+Chelonia mydas,320.5,1007,True
+Chelonia mydas,320.5,926,False
+Chelonia mydas,320.5,9977,False
+Chelonia mydas,320.5,9975,False
+Chelonia mydas,320.5,9976,False
+Chlamydotis macqueenii,320.5,4221,True
+Chlamydotis macqueenii,320.5,3638,False
+Chlamydotis macqueenii,320.5,706,False
+Chlamydotis macqueenii,320.5,1007,False
+Chlamydotis macqueenii,320.5,926,False
+Chlamydotis macqueenii,320.5,9977,False
+Chlamydotis macqueenii,320.5,9975,False
+Chlamydotis macqueenii,320.5,9976,False
+Chrysemys picta bellii,320.5,4221,True
+Chrysemys picta bellii,320.5,3638,False
+Chrysemys picta bellii,320.5,706,True
+Chrysemys picta bellii,320.5,1007,True
+Chrysemys picta bellii,320.5,926,False
+Chrysemys picta bellii,320.5,9977,False
+Chrysemys picta bellii,320.5,9975,False
+Chrysemys picta bellii,320.5,9976,False
+Colinus virginianus,320.5,4221,True
+Colinus virginianus,320.5,3638,True
+Colinus virginianus,320.5,706,True
+Colinus virginianus,320.5,1007,True
+Colinus virginianus,320.5,926,False
+Colinus virginianus,320.5,9977,False
+Colinus virginianus,320.5,9975,False
+Colinus virginianus,320.5,9976,False
+Colius striatus,320.5,4221,False
+Colius striatus,320.5,3638,False
+Colius striatus,320.5,706,True
+Colius striatus,320.5,1007,False
+Colius striatus,320.5,926,False
+Colius striatus,320.5,9977,False
+Colius striatus,320.5,9975,False
+Colius striatus,320.5,9976,False
+Columba livia,320.5,4221,True
+Columba livia,320.5,3638,True
+Columba livia,320.5,706,False
+Columba livia,320.5,1007,True
+Columba livia,320.5,926,True
+Columba livia,320.5,9977,False
+Columba livia,320.5,9975,False
+Columba livia,320.5,9976,False
+Corvus brachyrhynchos,320.5,4221,True
+Corvus brachyrhynchos,320.5,3638,True
+Corvus brachyrhynchos,320.5,706,True
+Corvus brachyrhynchos,320.5,1007,True
+Corvus brachyrhynchos,320.5,926,False
+Corvus brachyrhynchos,320.5,9977,False
+Corvus brachyrhynchos,320.5,9975,False
+Corvus brachyrhynchos,320.5,9976,False
+Corvus cornix cornix,320.5,4221,False
+Corvus cornix cornix,320.5,3638,True
+Corvus cornix cornix,320.5,706,True
+Corvus cornix cornix,320.5,1007,False
+Corvus cornix cornix,320.5,926,False
+Corvus cornix cornix,320.5,9977,False
+Corvus cornix cornix,320.5,9975,False
+Corvus cornix cornix,320.5,9976,False
+Crocodylus porosus,320.5,4221,True
+Crocodylus porosus,320.5,3638,True
+Crocodylus porosus,320.5,706,False
+Crocodylus porosus,320.5,1007,False
+Crocodylus porosus,320.5,926,True
+Crocodylus porosus,320.5,9977,False
+Crocodylus porosus,320.5,9975,False
+Crocodylus porosus,320.5,9976,False
+Crotalus mitchellii,320.5,4221,True
+Crotalus mitchellii,320.5,3638,True
+Crotalus mitchellii,320.5,706,False
+Crotalus mitchellii,320.5,1007,False
+Crotalus mitchellii,320.5,926,True
+Crotalus mitchellii,320.5,9977,False
+Crotalus mitchellii,320.5,9975,False
+Crotalus mitchellii,320.5,9976,False
+Cuculus canorus,320.5,4221,True
+Cuculus canorus,320.5,3638,True
+Cuculus canorus,320.5,706,True
+Cuculus canorus,320.5,1007,True
+Cuculus canorus,320.5,926,True
+Cuculus canorus,320.5,9977,False
+Cuculus canorus,320.5,9975,False
+Cuculus canorus,320.5,9976,False
+Egretta garzetta,320.5,4221,True
+Egretta garzetta,320.5,3638,True
+Egretta garzetta,320.5,706,False
+Egretta garzetta,320.5,1007,True
+Egretta garzetta,320.5,926,False
+Egretta garzetta,320.5,9977,False
+Egretta garzetta,320.5,9975,False
+Egretta garzetta,320.5,9976,False
+Eurypyga helias,320.5,4221,False
+Eurypyga helias,320.5,3638,True
+Eurypyga helias,320.5,706,True
+Eurypyga helias,320.5,1007,False
+Eurypyga helias,320.5,926,False
+Eurypyga helias,320.5,9977,False
+Eurypyga helias,320.5,9975,False
+Eurypyga helias,320.5,9976,False
+Falco cherrug,320.5,4221,True
+Falco cherrug,320.5,3638,True
+Falco cherrug,320.5,706,True
+Falco cherrug,320.5,1007,True
+Falco cherrug,320.5,926,True
+Falco cherrug,320.5,9977,False
+Falco cherrug,320.5,9975,False
+Falco cherrug,320.5,9976,False
+Falco peregrinus,320.5,4221,False
+Falco peregrinus,320.5,3638,False
+Falco peregrinus,320.5,706,False
+Falco peregrinus,320.5,1007,False
+Falco peregrinus,320.5,926,True
+Falco peregrinus,320.5,9977,False
+Falco peregrinus,320.5,9975,False
+Falco peregrinus,320.5,9976,False
+Ficedula albicollis,320.5,4221,True
+Ficedula albicollis,320.5,3638,True
+Ficedula albicollis,320.5,706,True
+Ficedula albicollis,320.5,1007,True
+Ficedula albicollis,320.5,926,False
+Ficedula albicollis,320.5,9977,False
+Ficedula albicollis,320.5,9975,False
+Ficedula albicollis,320.5,9976,False
+Fulmarus glacialis,320.5,4221,False
+Fulmarus glacialis,320.5,3638,False
+Fulmarus glacialis,320.5,706,True
+Fulmarus glacialis,320.5,1007,False
+Fulmarus glacialis,320.5,926,False
+Fulmarus glacialis,320.5,9977,True
+Fulmarus glacialis,320.5,9975,False
+Fulmarus glacialis,320.5,9976,False
+Gallus gallus,320.5,4221,True
+Gallus gallus,320.5,3638,True
+Gallus gallus,320.5,706,True
+Gallus gallus,320.5,1007,True
+Gallus gallus,320.5,926,True
+Gallus gallus,320.5,9977,False
+Gallus gallus,320.5,9975,False
+Gallus gallus,320.5,9976,False
+Gavia stellata,320.5,4221,False
+Gavia stellata,320.5,3638,True
+Gavia stellata,320.5,706,True
+Gavia stellata,320.5,1007,False
+Gavia stellata,320.5,926,False
+Gavia stellata,320.5,9977,True
+Gavia stellata,320.5,9975,False
+Gavia stellata,320.5,9976,False
+Gavialis gangeticus,320.5,4221,True
+Gavialis gangeticus,320.5,3638,True
+Gavialis gangeticus,320.5,706,False
+Gavialis gangeticus,320.5,1007,False
+Gavialis gangeticus,320.5,926,True
+Gavialis gangeticus,320.5,9977,False
+Gavialis gangeticus,320.5,9975,False
+Gavialis gangeticus,320.5,9976,False
+Geospiza fortis,320.5,4221,True
+Geospiza fortis,320.5,3638,True
+Geospiza fortis,320.5,706,True
+Geospiza fortis,320.5,1007,True
+Geospiza fortis,320.5,926,False
+Geospiza fortis,320.5,9977,False
+Geospiza fortis,320.5,9975,False
+Geospiza fortis,320.5,9976,False
+Haliaeetus albicilla,320.5,4221,False
+Haliaeetus albicilla,320.5,3638,True
+Haliaeetus albicilla,320.5,706,True
+Haliaeetus albicilla,320.5,1007,True
+Haliaeetus albicilla,320.5,926,False
+Haliaeetus albicilla,320.5,9977,False
+Haliaeetus albicilla,320.5,9975,False
+Haliaeetus albicilla,320.5,9976,False
+Haliaeetus leucocephalus,320.5,4221,False
+Haliaeetus leucocephalus,320.5,3638,False
+Haliaeetus leucocephalus,320.5,706,False
+Haliaeetus leucocephalus,320.5,1007,True
+Haliaeetus leucocephalus,320.5,926,True
+Haliaeetus leucocephalus,320.5,9977,False
+Haliaeetus leucocephalus,320.5,9975,False
+Haliaeetus leucocephalus,320.5,9976,False
+Leptosomus discolor,320.5,4221,True
+Leptosomus discolor,320.5,3638,True
+Leptosomus discolor,320.5,706,False
+Leptosomus discolor,320.5,1007,False
+Leptosomus discolor,320.5,926,True
+Leptosomus discolor,320.5,9977,False
+Leptosomus discolor,320.5,9975,False
+Leptosomus discolor,320.5,9976,False
+Manacus vitellinus,320.5,4221,True
+Manacus vitellinus,320.5,3638,True
+Manacus vitellinus,320.5,706,True
+Manacus vitellinus,320.5,1007,False
+Manacus vitellinus,320.5,926,False
+Manacus vitellinus,320.5,9977,False
+Manacus vitellinus,320.5,9975,False
+Manacus vitellinus,320.5,9976,False
+Meleagris gallopavo,320.5,4221,True
+Meleagris gallopavo,320.5,3638,True
+Meleagris gallopavo,320.5,706,True
+Meleagris gallopavo,320.5,1007,True
+Meleagris gallopavo,320.5,926,True
+Meleagris gallopavo,320.5,9977,False
+Meleagris gallopavo,320.5,9975,False
+Meleagris gallopavo,320.5,9976,False
+Melopsittacus undulatus,320.5,4221,True
+Melopsittacus undulatus,320.5,3638,True
+Melopsittacus undulatus,320.5,706,True
+Melopsittacus undulatus,320.5,1007,False
+Melopsittacus undulatus,320.5,926,True
+Melopsittacus undulatus,320.5,9977,False
+Melopsittacus undulatus,320.5,9975,False
+Melopsittacus undulatus,320.5,9976,False
+Mesitornis unicolor,320.5,4221,True
+Mesitornis unicolor,320.5,3638,True
+Mesitornis unicolor,320.5,706,True
+Mesitornis unicolor,320.5,1007,False
+Mesitornis unicolor,320.5,926,False
+Mesitornis unicolor,320.5,9977,False
+Mesitornis unicolor,320.5,9975,False
+Mesitornis unicolor,320.5,9976,False
+Nestor notabilis,320.5,4221,True
+Nestor notabilis,320.5,3638,True
+Nestor notabilis,320.5,706,True
+Nestor notabilis,320.5,1007,True
+Nestor notabilis,320.5,926,True
+Nestor notabilis,320.5,9977,True
+Nestor notabilis,320.5,9975,True
+Nestor notabilis,320.5,9976,True
+Nipponia nippon,320.5,4221,True
+Nipponia nippon,320.5,3638,True
+Nipponia nippon,320.5,706,False
+Nipponia nippon,320.5,1007,False
+Nipponia nippon,320.5,926,True
+Nipponia nippon,320.5,9977,True
+Nipponia nippon,320.5,9975,False
+Nipponia nippon,320.5,9976,False
+Ophiophagus hannah,320.5,4221,True
+Ophiophagus hannah,320.5,3638,True
+Ophiophagus hannah,320.5,706,False
+Ophiophagus hannah,320.5,1007,False
+Ophiophagus hannah,320.5,926,True
+Ophiophagus hannah,320.5,9977,False
+Ophiophagus hannah,320.5,9975,False
+Ophiophagus hannah,320.5,9976,False
+Ophisaurus gracilis,320.5,4221,True
+Ophisaurus gracilis,320.5,3638,True
+Ophisaurus gracilis,320.5,706,False
+Ophisaurus gracilis,320.5,1007,False
+Ophisaurus gracilis,320.5,926,True
+Ophisaurus gracilis,320.5,9977,False
+Ophisaurus gracilis,320.5,9975,False
+Ophisaurus gracilis,320.5,9976,False
+Opisthocomus hoazin,320.5,4221,True
+Opisthocomus hoazin,320.5,3638,True
+Opisthocomus hoazin,320.5,706,True
+Opisthocomus hoazin,320.5,1007,True
+Opisthocomus hoazin,320.5,926,False
+Opisthocomus hoazin,320.5,9977,False
+Opisthocomus hoazin,320.5,9975,False
+Opisthocomus hoazin,320.5,9976,False
+Pelecanus crispus,320.5,4221,True
+Pelecanus crispus,320.5,3638,True
+Pelecanus crispus,320.5,706,True
+Pelecanus crispus,320.5,1007,True
+Pelecanus crispus,320.5,926,False
+Pelecanus crispus,320.5,9977,True
+Pelecanus crispus,320.5,9975,False
+Pelecanus crispus,320.5,9976,False
+Pelodiscus sinensis,320.5,4221,True
+Pelodiscus sinensis,320.5,3638,True
+Pelodiscus sinensis,320.5,706,True
+Pelodiscus sinensis,320.5,1007,False
+Pelodiscus sinensis,320.5,926,True
+Pelodiscus sinensis,320.5,9977,False
+Pelodiscus sinensis,320.5,9975,False
+Pelodiscus sinensis,320.5,9976,False
+Phaethon lepturus,320.5,4221,False
+Phaethon lepturus,320.5,3638,True
+Phaethon lepturus,320.5,706,False
+Phaethon lepturus,320.5,1007,True
+Phaethon lepturus,320.5,926,True
+Phaethon lepturus,320.5,9977,True
+Phaethon lepturus,320.5,9975,False
+Phaethon lepturus,320.5,9976,False
+Phalacrocorax carbo,320.5,4221,False
+Phalacrocorax carbo,320.5,3638,False
+Phalacrocorax carbo,320.5,706,False
+Phalacrocorax carbo,320.5,1007,False
+Phalacrocorax carbo,320.5,926,False
+Phalacrocorax carbo,320.5,9977,True
+Phalacrocorax carbo,320.5,9975,False
+Phalacrocorax carbo,320.5,9976,False
+Phoenicopterus ruber ruber,320.5,4221,False
+Phoenicopterus ruber ruber,320.5,3638,True
+Phoenicopterus ruber ruber,320.5,706,False
+Phoenicopterus ruber ruber,320.5,1007,True
+Phoenicopterus ruber ruber,320.5,926,False
+Phoenicopterus ruber ruber,320.5,9977,True
+Phoenicopterus ruber ruber,320.5,9975,False
+Phoenicopterus ruber ruber,320.5,9976,False
+Picoides pubescens,320.5,4221,True
+Picoides pubescens,320.5,3638,True
+Picoides pubescens,320.5,706,True
+Picoides pubescens,320.5,1007,False
+Picoides pubescens,320.5,926,True
+Picoides pubescens,320.5,9977,False
+Picoides pubescens,320.5,9975,False
+Picoides pubescens,320.5,9976,False
+Podiceps cristatus,320.5,4221,False
+Podiceps cristatus,320.5,3638,True
+Podiceps cristatus,320.5,706,False
+Podiceps cristatus,320.5,1007,True
+Podiceps cristatus,320.5,926,False
+Podiceps cristatus,320.5,9977,False
+Podiceps cristatus,320.5,9975,False
+Podiceps cristatus,320.5,9976,False
+Pogona vitticeps,320.5,4221,True
+Pogona vitticeps,320.5,3638,True
+Pogona vitticeps,320.5,706,False
+Pogona vitticeps,320.5,1007,False
+Pogona vitticeps,320.5,926,True
+Pogona vitticeps,320.5,9977,False
+Pogona vitticeps,320.5,9975,False
+Pogona vitticeps,320.5,9976,False
+Pseudopoces humilis,320.5,4221,True
+Pseudopoces humilis,320.5,3638,True
+Pseudopoces humilis,320.5,706,True
+Pseudopoces humilis,320.5,1007,True
+Pseudopoces humilis,320.5,926,False
+Pseudopoces humilis,320.5,9977,False
+Pseudopoces humilis,320.5,9975,False
+Pseudopoces humilis,320.5,9976,False
+Pseudopodoces humilis,320.5,4221,True
+Pseudopodoces humilis,320.5,3638,True
+Pseudopodoces humilis,320.5,706,True
+Pseudopodoces humilis,320.5,1007,True
+Pseudopodoces humilis,320.5,926,False
+Pseudopodoces humilis,320.5,9977,False
+Pseudopodoces humilis,320.5,9975,False
+Pseudopodoces humilis,320.5,9976,False
+Pterocles gutturalis,320.5,4221,False
+Pterocles gutturalis,320.5,3638,True
+Pterocles gutturalis,320.5,706,False
+Pterocles gutturalis,320.5,1007,False
+Pterocles gutturalis,320.5,926,False
+Pterocles gutturalis,320.5,9977,False
+Pterocles gutturalis,320.5,9975,False
+Pterocles gutturalis,320.5,9976,False
+Pygoscelis adeliae,320.5,4221,False
+Pygoscelis adeliae,320.5,3638,True
+Pygoscelis adeliae,320.5,706,True
+Pygoscelis adeliae,320.5,1007,False
+Pygoscelis adeliae,320.5,926,False
+Pygoscelis adeliae,320.5,9977,False
+Pygoscelis adeliae,320.5,9975,False
+Pygoscelis adeliae,320.5,9976,False
+Python molurus bivittatus,320.5,4221,True
+Python molurus bivittatus,320.5,3638,True
+Python molurus bivittatus,320.5,706,False
+Python molurus bivittatus,320.5,1007,False
+Python molurus bivittatus,320.5,926,True
+Python molurus bivittatus,320.5,9977,False
+Python molurus bivittatus,320.5,9975,False
+Python molurus bivittatus,320.5,9976,False
+Serinus canaria,320.5,4221,True
+Serinus canaria,320.5,3638,True
+Serinus canaria,320.5,706,True
+Serinus canaria,320.5,1007,True
+Serinus canaria,320.5,926,False
+Serinus canaria,320.5,9977,False
+Serinus canaria,320.5,9975,False
+Serinus canaria,320.5,9976,False
+Struthio camelus australis,320.5,4221,False
+Struthio camelus australis,320.5,3638,True
+Struthio camelus australis,320.5,706,True
+Struthio camelus australis,320.5,1007,True
+Struthio camelus australis,320.5,926,True
+Struthio camelus australis,320.5,9977,True
+Struthio camelus australis,320.5,9975,False
+Struthio camelus australis,320.5,9976,False
+Taeniopygia guttata,320.5,4221,True
+Taeniopygia guttata,320.5,3638,True
+Taeniopygia guttata,320.5,706,True
+Taeniopygia guttata,320.5,1007,False
+Taeniopygia guttata,320.5,926,False
+Taeniopygia guttata,320.5,9977,False
+Taeniopygia guttata,320.5,9975,False
+Taeniopygia guttata,320.5,9976,False
+Tauraco erythrolophus,320.5,4221,False
+Tauraco erythrolophus,320.5,3638,True
+Tauraco erythrolophus,320.5,706,False
+Tauraco erythrolophus,320.5,1007,False
+Tauraco erythrolophus,320.5,926,False
+Tauraco erythrolophus,320.5,9977,False
+Tauraco erythrolophus,320.5,9975,False
+Tauraco erythrolophus,320.5,9976,False
+Thamnophis sirtalis,320.5,4221,False
+Thamnophis sirtalis,320.5,3638,True
+Thamnophis sirtalis,320.5,706,False
+Thamnophis sirtalis,320.5,1007,False
+Thamnophis sirtalis,320.5,926,True
+Thamnophis sirtalis,320.5,9977,False
+Thamnophis sirtalis,320.5,9975,False
+Thamnophis sirtalis,320.5,9976,False
+Tinamus guttatus,320.5,4221,False
+Tinamus guttatus,320.5,3638,False
+Tinamus guttatus,320.5,706,False
+Tinamus guttatus,320.5,1007,True
+Tinamus guttatus,320.5,926,False
+Tinamus guttatus,320.5,9977,False
+Tinamus guttatus,320.5,9975,False
+Tinamus guttatus,320.5,9976,False
+Tyto alba,320.5,4221,False
+Tyto alba,320.5,3638,True
+Tyto alba,320.5,706,True
+Tyto alba,320.5,1007,False
+Tyto alba,320.5,926,False
+Tyto alba,320.5,9977,False
+Tyto alba,320.5,9975,False
+Tyto alba,320.5,9976,False
+Vipera berus berus,320.5,4221,True
+Vipera berus berus,320.5,3638,True
+Vipera berus berus,320.5,706,False
+Vipera berus berus,320.5,1007,False
+Vipera berus berus,320.5,926,True
+Vipera berus berus,320.5,9977,False
+Vipera berus berus,320.5,9975,False
+Vipera berus berus,320.5,9976,False
+Zonotrichia albicollis,320.5,4221,True
+Zonotrichia albicollis,320.5,3638,True
+Zonotrichia albicollis,320.5,706,True
+Zonotrichia albicollis,320.5,1007,True
+Zonotrichia albicollis,320.5,926,False
+Zonotrichia albicollis,320.5,9977,False
+Zonotrichia albicollis,320.5,9975,False
+Zonotrichia albicollis,320.5,9976,False
+Ornithorhynchus anatinus,179.2,4221,True
+Ornithorhynchus anatinus,179.2,3638,False
+Ornithorhynchus anatinus,179.2,706,True
+Ornithorhynchus anatinus,179.2,1007,False
+Ornithorhynchus anatinus,179.2,926,False
+Ornithorhynchus anatinus,179.2,9977,False
+Ornithorhynchus anatinus,179.2,9975,False
+Ornithorhynchus anatinus,179.2,9976,False
+Macropus eugenii,163.7,4221,True
+Macropus eugenii,163.7,3638,False
+Macropus eugenii,163.7,706,True
+Macropus eugenii,163.7,1007,False
+Macropus eugenii,163.7,926,False
+Macropus eugenii,163.7,9977,False
+Macropus eugenii,163.7,9975,False
+Macropus eugenii,163.7,9976,False
+Monodelphis domestica,163.7,4221,True
+Monodelphis domestica,163.7,3638,False
+Monodelphis domestica,163.7,706,True
+Monodelphis domestica,163.7,1007,False
+Monodelphis domestica,163.7,926,False
+Monodelphis domestica,163.7,9977,False
+Monodelphis domestica,163.7,9975,False
+Monodelphis domestica,163.7,9976,False
+Sarcophilus harrisii,163.7,4221,True
+Sarcophilus harrisii,163.7,3638,False
+Sarcophilus harrisii,163.7,706,False
+Sarcophilus harrisii,163.7,1007,False
+Sarcophilus harrisii,163.7,926,False
+Sarcophilus harrisii,163.7,9977,False
+Sarcophilus harrisii,163.7,9975,False
+Sarcophilus harrisii,163.7,9976,False
+Choloepus hoffmanni,105.0,4221,False
+Choloepus hoffmanni,105.0,3638,False
+Choloepus hoffmanni,105.0,706,False
+Choloepus hoffmanni,105.0,1007,False
+Choloepus hoffmanni,105.0,926,False
+Choloepus hoffmanni,105.0,9977,False
+Choloepus hoffmanni,105.0,9975,False
+Choloepus hoffmanni,105.0,9976,False
+Chrysochloris asiatica,105.0,4221,True
+Chrysochloris asiatica,105.0,3638,False
+Chrysochloris asiatica,105.0,706,False
+Chrysochloris asiatica,105.0,1007,False
+Chrysochloris asiatica,105.0,926,False
+Chrysochloris asiatica,105.0,9977,False
+Chrysochloris asiatica,105.0,9975,False
+Chrysochloris asiatica,105.0,9976,False
+Dasypus novemcinctus,105.0,4221,True
+Dasypus novemcinctus,105.0,3638,False
+Dasypus novemcinctus,105.0,706,False
+Dasypus novemcinctus,105.0,1007,False
+Dasypus novemcinctus,105.0,926,False
+Dasypus novemcinctus,105.0,9977,False
+Dasypus novemcinctus,105.0,9975,False
+Dasypus novemcinctus,105.0,9976,False
+Echinops telfairi,105.0,4221,True
+Echinops telfairi,105.0,3638,False
+Echinops telfairi,105.0,706,False
+Echinops telfairi,105.0,1007,False
+Echinops telfairi,105.0,926,False
+Echinops telfairi,105.0,9977,False
+Echinops telfairi,105.0,9975,False
+Echinops telfairi,105.0,9976,False
+Elephantulus edwardii,105.0,4221,True
+Elephantulus edwardii,105.0,3638,False
+Elephantulus edwardii,105.0,706,False
+Elephantulus edwardii,105.0,1007,False
+Elephantulus edwardii,105.0,926,False
+Elephantulus edwardii,105.0,9977,False
+Elephantulus edwardii,105.0,9975,False
+Elephantulus edwardii,105.0,9976,False
+Loxodonta africana,105.0,4221,True
+Loxodonta africana,105.0,3638,False
+Loxodonta africana,105.0,706,False
+Loxodonta africana,105.0,1007,False
+Loxodonta africana,105.0,926,False
+Loxodonta africana,105.0,9977,False
+Loxodonta africana,105.0,9975,False
+Loxodonta africana,105.0,9976,False
+Orycteropus afer,105.0,4221,True
+Orycteropus afer,105.0,3638,False
+Orycteropus afer,105.0,706,False
+Orycteropus afer,105.0,1007,False
+Orycteropus afer,105.0,926,False
+Orycteropus afer,105.0,9977,False
+Orycteropus afer,105.0,9975,False
+Orycteropus afer,105.0,9976,False
+Procavia capensis,105.0,4221,True
+Procavia capensis,105.0,3638,False
+Procavia capensis,105.0,706,False
+Procavia capensis,105.0,1007,False
+Procavia capensis,105.0,926,False
+Procavia capensis,105.0,9977,False
+Procavia capensis,105.0,9975,False
+Procavia capensis,105.0,9976,False
+Trichechus manatus latirostris,105.0,4221,True
+Trichechus manatus latirostris,105.0,3638,False
+Trichechus manatus latirostris,105.0,706,False
+Trichechus manatus latirostris,105.0,1007,False
+Trichechus manatus latirostris,105.0,926,False
+Trichechus manatus latirostris,105.0,9977,False
+Trichechus manatus latirostris,105.0,9975,False
+Trichechus manatus latirostris,105.0,9976,False
+Ailuropoda melanoleuca,97.5,4221,True
+Ailuropoda melanoleuca,97.5,3638,False
+Ailuropoda melanoleuca,97.5,706,False
+Ailuropoda melanoleuca,97.5,1007,False
+Ailuropoda melanoleuca,97.5,926,False
+Ailuropoda melanoleuca,97.5,9977,False
+Ailuropoda melanoleuca,97.5,9975,False
+Ailuropoda melanoleuca,97.5,9976,False
+Balaenoptera acutorostrata scammoni,97.5,4221,True
+Balaenoptera acutorostrata scammoni,97.5,3638,False
+Balaenoptera acutorostrata scammoni,97.5,706,False
+Balaenoptera acutorostrata scammoni,97.5,1007,False
+Balaenoptera acutorostrata scammoni,97.5,926,False
+Balaenoptera acutorostrata scammoni,97.5,9977,False
+Balaenoptera acutorostrata scammoni,97.5,9975,False
+Balaenoptera acutorostrata scammoni,97.5,9976,False
+Balaenoptera bonaerensis,97.5,4221,True
+Balaenoptera bonaerensis,97.5,3638,False
+Balaenoptera bonaerensis,97.5,706,False
+Balaenoptera bonaerensis,97.5,1007,False
+Balaenoptera bonaerensis,97.5,926,False
+Balaenoptera bonaerensis,97.5,9977,False
+Balaenoptera bonaerensis,97.5,9975,False
+Balaenoptera bonaerensis,97.5,9976,False
+Bison bison bison,97.5,4221,True
+Bison bison bison,97.5,3638,False
+Bison bison bison,97.5,706,False
+Bison bison bison,97.5,1007,False
+Bison bison bison,97.5,926,False
+Bison bison bison,97.5,9977,False
+Bison bison bison,97.5,9975,False
+Bison bison bison,97.5,9976,False
+Bos indicus,97.5,4221,True
+Bos indicus,97.5,3638,False
+Bos indicus,97.5,706,False
+Bos indicus,97.5,1007,False
+Bos indicus,97.5,926,False
+Bos indicus,97.5,9977,False
+Bos indicus,97.5,9975,False
+Bos indicus,97.5,9976,False
+Bos mutus,97.5,4221,True
+Bos mutus,97.5,3638,False
+Bos mutus,97.5,706,False
+Bos mutus,97.5,1007,False
+Bos mutus,97.5,926,False
+Bos mutus,97.5,9977,False
+Bos mutus,97.5,9975,False
+Bos mutus,97.5,9976,False
+Bos taurus,97.5,4221,True
+Bos taurus,97.5,3638,False
+Bos taurus,97.5,706,False
+Bos taurus,97.5,1007,False
+Bos taurus,97.5,926,False
+Bos taurus,97.5,9977,False
+Bos taurus,97.5,9975,False
+Bos taurus,97.5,9976,False
+Bubalus bubalis,97.5,4221,True
+Bubalus bubalis,97.5,3638,False
+Bubalus bubalis,97.5,706,False
+Bubalus bubalis,97.5,1007,False
+Bubalus bubalis,97.5,926,False
+Bubalus bubalis,97.5,9977,False
+Bubalus bubalis,97.5,9975,False
+Bubalus bubalis,97.5,9976,False
+Camelus bactrianus,97.5,4221,True
+Camelus bactrianus,97.5,3638,False
+Camelus bactrianus,97.5,706,False
+Camelus bactrianus,97.5,1007,False
+Camelus bactrianus,97.5,926,False
+Camelus bactrianus,97.5,9977,False
+Camelus bactrianus,97.5,9975,False
+Camelus bactrianus,97.5,9976,False
+Camelus dromedarius,97.5,4221,True
+Camelus dromedarius,97.5,3638,False
+Camelus dromedarius,97.5,706,False
+Camelus dromedarius,97.5,1007,False
+Camelus dromedarius,97.5,926,False
+Camelus dromedarius,97.5,9977,False
+Camelus dromedarius,97.5,9975,False
+Camelus dromedarius,97.5,9976,False
+Camelus ferus,97.5,4221,False
+Camelus ferus,97.5,3638,False
+Camelus ferus,97.5,706,False
+Camelus ferus,97.5,1007,False
+Camelus ferus,97.5,926,False
+Camelus ferus,97.5,9977,False
+Camelus ferus,97.5,9975,False
+Camelus ferus,97.5,9976,False
+Canis familiaris,97.5,4221,True
+Canis familiaris,97.5,3638,False
+Canis familiaris,97.5,706,False
+Canis familiaris,97.5,1007,False
+Canis familiaris,97.5,926,False
+Canis familiaris,97.5,9977,False
+Canis familiaris,97.5,9975,False
+Canis familiaris,97.5,9976,False
+Capra aegagrus,97.5,4221,True
+Capra aegagrus,97.5,3638,False
+Capra aegagrus,97.5,706,False
+Capra aegagrus,97.5,1007,False
+Capra aegagrus,97.5,926,False
+Capra aegagrus,97.5,9977,False
+Capra aegagrus,97.5,9975,False
+Capra aegagrus,97.5,9976,False
+Capra hircus,97.5,4221,True
+Capra hircus,97.5,3638,False
+Capra hircus,97.5,706,False
+Capra hircus,97.5,1007,False
+Capra hircus,97.5,926,False
+Capra hircus,97.5,9977,False
+Capra hircus,97.5,9975,False
+Capra hircus,97.5,9976,False
+Capreolus capreolus,97.5,4221,True
+Capreolus capreolus,97.5,3638,False
+Capreolus capreolus,97.5,706,False
+Capreolus capreolus,97.5,1007,False
+Capreolus capreolus,97.5,926,False
+Capreolus capreolus,97.5,9977,False
+Capreolus capreolus,97.5,9975,False
+Capreolus capreolus,97.5,9976,False
+Ceratotherium simum,97.5,4221,True
+Ceratotherium simum,97.5,3638,False
+Ceratotherium simum,97.5,706,False
+Ceratotherium simum,97.5,1007,False
+Ceratotherium simum,97.5,926,False
+Ceratotherium simum,97.5,9977,False
+Ceratotherium simum,97.5,9975,False
+Ceratotherium simum,97.5,9976,False
+Condylura cristata,97.5,4221,True
+Condylura cristata,97.5,3638,False
+Condylura cristata,97.5,706,False
+Condylura cristata,97.5,1007,False
+Condylura cristata,97.5,926,False
+Condylura cristata,97.5,9977,False
+Condylura cristata,97.5,9975,False
+Condylura cristata,97.5,9976,False
+Eidolon helvum,97.5,4221,False
+Eidolon helvum,97.5,3638,False
+Eidolon helvum,97.5,706,False
+Eidolon helvum,97.5,1007,False
+Eidolon helvum,97.5,926,False
+Eidolon helvum,97.5,9977,False
+Eidolon helvum,97.5,9975,False
+Eidolon helvum,97.5,9976,False
+Eptesicus fuscus,97.5,4221,True
+Eptesicus fuscus,97.5,3638,False
+Eptesicus fuscus,97.5,706,False
+Eptesicus fuscus,97.5,1007,False
+Eptesicus fuscus,97.5,926,False
+Eptesicus fuscus,97.5,9977,False
+Eptesicus fuscus,97.5,9975,False
+Eptesicus fuscus,97.5,9976,False
+Equus caballus,97.5,4221,True
+Equus caballus,97.5,3638,False
+Equus caballus,97.5,706,False
+Equus caballus,97.5,1007,False
+Equus caballus,97.5,926,False
+Equus caballus,97.5,9977,False
+Equus caballus,97.5,9975,False
+Equus caballus,97.5,9976,False
+Equus przewalskii,97.5,4221,True
+Equus przewalskii,97.5,3638,False
+Equus przewalskii,97.5,706,False
+Equus przewalskii,97.5,1007,False
+Equus przewalskii,97.5,926,False
+Equus przewalskii,97.5,9977,False
+Equus przewalskii,97.5,9975,False
+Equus przewalskii,97.5,9976,False
+Erinaceus europaeus,97.5,4221,True
+Erinaceus europaeus,97.5,3638,False
+Erinaceus europaeus,97.5,706,False
+Erinaceus europaeus,97.5,1007,False
+Erinaceus europaeus,97.5,926,False
+Erinaceus europaeus,97.5,9977,False
+Erinaceus europaeus,97.5,9975,False
+Erinaceus europaeus,97.5,9976,False
+Felis catus,97.5,4221,True
+Felis catus,97.5,3638,False
+Felis catus,97.5,706,False
+Felis catus,97.5,1007,False
+Felis catus,97.5,926,False
+Felis catus,97.5,9977,False
+Felis catus,97.5,9975,False
+Felis catus,97.5,9976,False
+Leptonychotes weddellii,97.5,4221,True
+Leptonychotes weddellii,97.5,3638,False
+Leptonychotes weddellii,97.5,706,False
+Leptonychotes weddellii,97.5,1007,False
+Leptonychotes weddellii,97.5,926,False
+Leptonychotes weddellii,97.5,9977,False
+Leptonychotes weddellii,97.5,9975,False
+Leptonychotes weddellii,97.5,9976,False
+Lipotes vexillifer,97.5,4221,True
+Lipotes vexillifer,97.5,3638,False
+Lipotes vexillifer,97.5,706,False
+Lipotes vexillifer,97.5,1007,False
+Lipotes vexillifer,97.5,926,False
+Lipotes vexillifer,97.5,9977,False
+Lipotes vexillifer,97.5,9975,False
+Lipotes vexillifer,97.5,9976,False
+Manis pentadactyla,97.5,4221,False
+Manis pentadactyla,97.5,3638,False
+Manis pentadactyla,97.5,706,False
+Manis pentadactyla,97.5,1007,False
+Manis pentadactyla,97.5,926,False
+Manis pentadactyla,97.5,9977,False
+Manis pentadactyla,97.5,9975,False
+Manis pentadactyla,97.5,9976,False
+Megaderma lyra,97.5,4221,False
+Megaderma lyra,97.5,3638,False
+Megaderma lyra,97.5,706,False
+Megaderma lyra,97.5,1007,False
+Megaderma lyra,97.5,926,False
+Megaderma lyra,97.5,9977,False
+Megaderma lyra,97.5,9975,False
+Megaderma lyra,97.5,9976,False
+Mustela putorius furo,97.5,4221,False
+Mustela putorius furo,97.5,3638,False
+Mustela putorius furo,97.5,706,False
+Mustela putorius furo,97.5,1007,False
+Mustela putorius furo,97.5,926,False
+Mustela putorius furo,97.5,9977,False
+Mustela putorius furo,97.5,9975,False
+Mustela putorius furo,97.5,9976,False
+Myotis brandtii,97.5,4221,True
+Myotis brandtii,97.5,3638,False
+Myotis brandtii,97.5,706,False
+Myotis brandtii,97.5,1007,False
+Myotis brandtii,97.5,926,False
+Myotis brandtii,97.5,9977,False
+Myotis brandtii,97.5,9975,False
+Myotis brandtii,97.5,9976,False
+Myotis davidii,97.5,4221,True
+Myotis davidii,97.5,3638,False
+Myotis davidii,97.5,706,False
+Myotis davidii,97.5,1007,False
+Myotis davidii,97.5,926,False
+Myotis davidii,97.5,9977,False
+Myotis davidii,97.5,9975,False
+Myotis davidii,97.5,9976,False
+Myotis lucifugus,97.5,4221,True
+Myotis lucifugus,97.5,3638,False
+Myotis lucifugus,97.5,706,False
+Myotis lucifugus,97.5,1007,False
+Myotis lucifugus,97.5,926,False
+Myotis lucifugus,97.5,9977,False
+Myotis lucifugus,97.5,9975,False
+Myotis lucifugus,97.5,9976,False
+Odobenus rosmarus divergens,97.5,4221,True
+Odobenus rosmarus divergens,97.5,3638,False
+Odobenus rosmarus divergens,97.5,706,False
+Odobenus rosmarus divergens,97.5,1007,False
+Odobenus rosmarus divergens,97.5,926,False
+Odobenus rosmarus divergens,97.5,9977,False
+Odobenus rosmarus divergens,97.5,9975,False
+Odobenus rosmarus divergens,97.5,9976,False
+Orcinus orca,97.5,4221,True
+Orcinus orca,97.5,3638,False
+Orcinus orca,97.5,706,False
+Orcinus orca,97.5,1007,False
+Orcinus orca,97.5,926,False
+Orcinus orca,97.5,9977,False
+Orcinus orca,97.5,9975,False
+Orcinus orca,97.5,9976,False
+Ovis aries,97.5,4221,True
+Ovis aries,97.5,3638,False
+Ovis aries,97.5,706,False
+Ovis aries,97.5,1007,False
+Ovis aries,97.5,926,False
+Ovis aries,97.5,9977,False
+Ovis aries,97.5,9975,False
+Ovis aries,97.5,9976,False
+Ovis aries musimon,97.5,4221,True
+Ovis aries musimon,97.5,3638,False
+Ovis aries musimon,97.5,706,False
+Ovis aries musimon,97.5,1007,False
+Ovis aries musimon,97.5,926,False
+Ovis aries musimon,97.5,9977,False
+Ovis aries musimon,97.5,9975,False
+Ovis aries musimon,97.5,9976,False
+Ovis canadensis canadensis,97.5,4221,False
+Ovis canadensis canadensis,97.5,3638,False
+Ovis canadensis canadensis,97.5,706,False
+Ovis canadensis canadensis,97.5,1007,False
+Ovis canadensis canadensis,97.5,926,False
+Ovis canadensis canadensis,97.5,9977,False
+Ovis canadensis canadensis,97.5,9975,False
+Ovis canadensis canadensis,97.5,9976,False
+Panthera tigris altaica,97.5,4221,False
+Panthera tigris altaica,97.5,3638,False
+Panthera tigris altaica,97.5,706,False
+Panthera tigris altaica,97.5,1007,False
+Panthera tigris altaica,97.5,926,False
+Panthera tigris altaica,97.5,9977,False
+Panthera tigris altaica,97.5,9975,False
+Panthera tigris altaica,97.5,9976,False
+Pantholops hodgsonii,97.5,4221,True
+Pantholops hodgsonii,97.5,3638,False
+Pantholops hodgsonii,97.5,706,False
+Pantholops hodgsonii,97.5,1007,False
+Pantholops hodgsonii,97.5,926,False
+Pantholops hodgsonii,97.5,9977,False
+Pantholops hodgsonii,97.5,9975,False
+Pantholops hodgsonii,97.5,9976,False
+Physter macrocephalus,97.5,4221,True
+Physter macrocephalus,97.5,3638,False
+Physter macrocephalus,97.5,706,False
+Physter macrocephalus,97.5,1007,False
+Physter macrocephalus,97.5,926,False
+Physter macrocephalus,97.5,9977,False
+Physter macrocephalus,97.5,9975,False
+Physter macrocephalus,97.5,9976,False
+Pteronotus parnellii,97.5,4221,False
+Pteronotus parnellii,97.5,3638,False
+Pteronotus parnellii,97.5,706,False
+Pteronotus parnellii,97.5,1007,False
+Pteronotus parnellii,97.5,926,False
+Pteronotus parnellii,97.5,9977,False
+Pteronotus parnellii,97.5,9975,False
+Pteronotus parnellii,97.5,9976,False
+Pteropus alecto,97.5,4221,True
+Pteropus alecto,97.5,3638,False
+Pteropus alecto,97.5,706,False
+Pteropus alecto,97.5,1007,False
+Pteropus alecto,97.5,926,False
+Pteropus alecto,97.5,9977,False
+Pteropus alecto,97.5,9975,False
+Pteropus alecto,97.5,9976,False
+Pteropus vampyrus,97.5,4221,True
+Pteropus vampyrus,97.5,3638,False
+Pteropus vampyrus,97.5,706,False
+Pteropus vampyrus,97.5,1007,False
+Pteropus vampyrus,97.5,926,False
+Pteropus vampyrus,97.5,9977,False
+Pteropus vampyrus,97.5,9975,False
+Pteropus vampyrus,97.5,9976,False
+Rhinolophus ferrumequinum,97.5,4221,True
+Rhinolophus ferrumequinum,97.5,3638,False
+Rhinolophus ferrumequinum,97.5,706,False
+Rhinolophus ferrumequinum,97.5,1007,False
+Rhinolophus ferrumequinum,97.5,926,False
+Rhinolophus ferrumequinum,97.5,9977,False
+Rhinolophus ferrumequinum,97.5,9975,False
+Rhinolophus ferrumequinum,97.5,9976,False
+Sorex araneus,97.5,4221,False
+Sorex araneus,97.5,3638,False
+Sorex araneus,97.5,706,False
+Sorex araneus,97.5,1007,False
+Sorex araneus,97.5,926,False
+Sorex araneus,97.5,9977,False
+Sorex araneus,97.5,9975,False
+Sorex araneus,97.5,9976,False
+Sus scrofa,97.5,4221,True
+Sus scrofa,97.5,3638,False
+Sus scrofa,97.5,706,False
+Sus scrofa,97.5,1007,False
+Sus scrofa,97.5,926,False
+Sus scrofa,97.5,9977,False
+Sus scrofa,97.5,9975,False
+Sus scrofa,97.5,9976,False
+Tursiops truncatus,97.5,4221,True
+Tursiops truncatus,97.5,3638,False
+Tursiops truncatus,97.5,706,False
+Tursiops truncatus,97.5,1007,False
+Tursiops truncatus,97.5,926,False
+Tursiops truncatus,97.5,9977,False
+Tursiops truncatus,97.5,9975,False
+Tursiops truncatus,97.5,9976,False
+Ursus maritimus,97.5,4221,False
+Ursus maritimus,97.5,3638,False
+Ursus maritimus,97.5,706,False
+Ursus maritimus,97.5,1007,False
+Ursus maritimus,97.5,926,False
+Ursus maritimus,97.5,9977,False
+Ursus maritimus,97.5,9975,False
+Ursus maritimus,97.5,9976,False
+Vicugna pacos,97.5,4221,True
+Vicugna pacos,97.5,3638,False
+Vicugna pacos,97.5,706,False
+Vicugna pacos,97.5,1007,False
+Vicugna pacos,97.5,926,False
+Vicugna pacos,97.5,9977,False
+Vicugna pacos,97.5,9975,False
+Vicugna pacos,97.5,9976,False
+Vicugna pacos huacaya,97.5,4221,True
+Vicugna pacos huacaya,97.5,3638,False
+Vicugna pacos huacaya,97.5,706,False
+Vicugna pacos huacaya,97.5,1007,False
+Vicugna pacos huacaya,97.5,926,False
+Vicugna pacos huacaya,97.5,9977,False
+Vicugna pacos huacaya,97.5,9975,False
+Vicugna pacos huacaya,97.5,9976,False
+Cavia aperea,90.9,4221,True
+Cavia aperea,90.9,3638,False
+Cavia aperea,90.9,706,False
+Cavia aperea,90.9,1007,False
+Cavia aperea,90.9,926,False
+Cavia aperea,90.9,9977,False
+Cavia aperea,90.9,9975,False
+Cavia aperea,90.9,9976,False
+Cavia porcellus,90.9,4221,True
+Cavia porcellus,90.9,3638,False
+Cavia porcellus,90.9,706,False
+Cavia porcellus,90.9,1007,False
+Cavia porcellus,90.9,926,False
+Cavia porcellus,90.9,9977,False
+Cavia porcellus,90.9,9975,False
+Cavia porcellus,90.9,9976,False
+Chinchilla lanigera,90.9,4221,True
+Chinchilla lanigera,90.9,3638,False
+Chinchilla lanigera,90.9,706,False
+Chinchilla lanigera,90.9,1007,False
+Chinchilla lanigera,90.9,926,False
+Chinchilla lanigera,90.9,9977,False
+Chinchilla lanigera,90.9,9975,False
+Chinchilla lanigera,90.9,9976,False
+Cricetulus griseus,90.9,4221,True
+Cricetulus griseus,90.9,3638,False
+Cricetulus griseus,90.9,706,False
+Cricetulus griseus,90.9,1007,False
+Cricetulus griseus,90.9,926,False
+Cricetulus griseus,90.9,9977,False
+Cricetulus griseus,90.9,9975,False
+Cricetulus griseus,90.9,9976,False
+Dipodomys ordii,90.9,4221,True
+Dipodomys ordii,90.9,3638,False
+Dipodomys ordii,90.9,706,False
+Dipodomys ordii,90.9,1007,False
+Dipodomys ordii,90.9,926,False
+Dipodomys ordii,90.9,9977,False
+Dipodomys ordii,90.9,9975,False
+Dipodomys ordii,90.9,9976,False
+Fukomys damarensis,90.9,4221,True
+Fukomys damarensis,90.9,3638,False
+Fukomys damarensis,90.9,706,False
+Fukomys damarensis,90.9,1007,False
+Fukomys damarensis,90.9,926,False
+Fukomys damarensis,90.9,9977,False
+Fukomys damarensis,90.9,9975,False
+Fukomys damarensis,90.9,9976,False
+Heterocephalus glaber,90.9,4221,True
+Heterocephalus glaber,90.9,3638,False
+Heterocephalus glaber,90.9,706,False
+Heterocephalus glaber,90.9,1007,False
+Heterocephalus glaber,90.9,926,False
+Heterocephalus glaber,90.9,9977,False
+Heterocephalus glaber,90.9,9975,False
+Heterocephalus glaber,90.9,9976,False
+Ictidomys tridecemlineatus,90.9,4221,True
+Ictidomys tridecemlineatus,90.9,3638,False
+Ictidomys tridecemlineatus,90.9,706,False
+Ictidomys tridecemlineatus,90.9,1007,False
+Ictidomys tridecemlineatus,90.9,926,False
+Ictidomys tridecemlineatus,90.9,9977,False
+Ictidomys tridecemlineatus,90.9,9975,False
+Ictidomys tridecemlineatus,90.9,9976,False
+Jaculus jaculus,90.9,4221,True
+Jaculus jaculus,90.9,3638,False
+Jaculus jaculus,90.9,706,False
+Jaculus jaculus,90.9,1007,False
+Jaculus jaculus,90.9,926,False
+Jaculus jaculus,90.9,9977,False
+Jaculus jaculus,90.9,9975,False
+Jaculus jaculus,90.9,9976,False
+Marmota marmota marmota,90.9,4221,False
+Marmota marmota marmota,90.9,3638,False
+Marmota marmota marmota,90.9,706,False
+Marmota marmota marmota,90.9,1007,False
+Marmota marmota marmota,90.9,926,False
+Marmota marmota marmota,90.9,9977,False
+Marmota marmota marmota,90.9,9975,False
+Marmota marmota marmota,90.9,9976,False
+Mesocricetus auratus,90.9,4221,True
+Mesocricetus auratus,90.9,3638,False
+Mesocricetus auratus,90.9,706,False
+Mesocricetus auratus,90.9,1007,False
+Mesocricetus auratus,90.9,926,False
+Mesocricetus auratus,90.9,9977,False
+Mesocricetus auratus,90.9,9975,False
+Mesocricetus auratus,90.9,9976,False
+Microtus ochrogaster,90.9,4221,True
+Microtus ochrogaster,90.9,3638,False
+Microtus ochrogaster,90.9,706,False
+Microtus ochrogaster,90.9,1007,False
+Microtus ochrogaster,90.9,926,False
+Microtus ochrogaster,90.9,9977,False
+Microtus ochrogaster,90.9,9975,False
+Microtus ochrogaster,90.9,9976,False
+Mus musculus,90.9,4221,True
+Mus musculus,90.9,3638,False
+Mus musculus,90.9,706,False
+Mus musculus,90.9,1007,False
+Mus musculus,90.9,926,False
+Mus musculus,90.9,9977,False
+Mus musculus,90.9,9975,False
+Mus musculus,90.9,9976,False
+Nannospalax galili,90.9,4221,True
+Nannospalax galili,90.9,3638,False
+Nannospalax galili,90.9,706,False
+Nannospalax galili,90.9,1007,False
+Nannospalax galili,90.9,926,False
+Nannospalax galili,90.9,9977,False
+Nannospalax galili,90.9,9975,False
+Nannospalax galili,90.9,9976,False
+Ochotona princeps,90.9,4221,True
+Ochotona princeps,90.9,3638,False
+Ochotona princeps,90.9,706,False
+Ochotona princeps,90.9,1007,False
+Ochotona princeps,90.9,926,False
+Ochotona princeps,90.9,9977,False
+Ochotona princeps,90.9,9975,False
+Ochotona princeps,90.9,9976,False
+Octodon degus,90.9,4221,True
+Octodon degus,90.9,3638,False
+Octodon degus,90.9,706,False
+Octodon degus,90.9,1007,False
+Octodon degus,90.9,926,False
+Octodon degus,90.9,9977,False
+Octodon degus,90.9,9975,False
+Octodon degus,90.9,9976,False
+Oryctolagus cuniculus,90.9,4221,True
+Oryctolagus cuniculus,90.9,3638,False
+Oryctolagus cuniculus,90.9,706,False
+Oryctolagus cuniculus,90.9,1007,False
+Oryctolagus cuniculus,90.9,926,False
+Oryctolagus cuniculus,90.9,9977,False
+Oryctolagus cuniculus,90.9,9975,False
+Oryctolagus cuniculus,90.9,9976,False
+Peromyscus maniculatus bairdii,90.9,4221,True
+Peromyscus maniculatus bairdii,90.9,3638,False
+Peromyscus maniculatus bairdii,90.9,706,False
+Peromyscus maniculatus bairdii,90.9,1007,False
+Peromyscus maniculatus bairdii,90.9,926,False
+Peromyscus maniculatus bairdii,90.9,9977,False
+Peromyscus maniculatus bairdii,90.9,9975,False
+Peromyscus maniculatus bairdii,90.9,9976,False
+Rattus norvegicus,90.9,4221,True
+Rattus norvegicus,90.9,3638,False
+Rattus norvegicus,90.9,706,False
+Rattus norvegicus,90.9,1007,False
+Rattus norvegicus,90.9,926,False
+Rattus norvegicus,90.9,9977,False
+Rattus norvegicus,90.9,9975,False
+Rattus norvegicus,90.9,9976,False
+Tupaia belangeri,85.9,4221,True
+Tupaia belangeri,85.9,3638,False
+Tupaia belangeri,85.9,706,False
+Tupaia belangeri,85.9,1007,False
+Tupaia belangeri,85.9,926,False
+Tupaia belangeri,85.9,9977,False
+Tupaia belangeri,85.9,9975,False
+Tupaia belangeri,85.9,9976,False
+Tupaia chinensis,85.9,4221,True
+Tupaia chinensis,85.9,3638,False
+Tupaia chinensis,85.9,706,False
+Tupaia chinensis,85.9,1007,False
+Tupaia chinensis,85.9,926,False
+Tupaia chinensis,85.9,9977,False
+Tupaia chinensis,85.9,9975,False
+Tupaia chinensis,85.9,9976,False
+Galeopterus variegatus,81.3,4221,True
+Galeopterus variegatus,81.3,3638,False
+Galeopterus variegatus,81.3,706,False
+Galeopterus variegatus,81.3,1007,False
+Galeopterus variegatus,81.3,926,False
+Galeopterus variegatus,81.3,9977,False
+Galeopterus variegatus,81.3,9975,False
+Galeopterus variegatus,81.3,9976,False
+Daubentonia madagascariensis,75.9,4221,False
+Daubentonia madagascariensis,75.9,3638,False
+Daubentonia madagascariensis,75.9,706,False
+Daubentonia madagascariensis,75.9,1007,False
+Daubentonia madagascariensis,75.9,926,False
+Daubentonia madagascariensis,75.9,9977,False
+Daubentonia madagascariensis,75.9,9975,False
+Daubentonia madagascariensis,75.9,9976,False
+Eulemur flavifrons,75.9,4221,True
+Eulemur flavifrons,75.9,3638,False
+Eulemur flavifrons,75.9,706,False
+Eulemur flavifrons,75.9,1007,False
+Eulemur flavifrons,75.9,926,False
+Eulemur flavifrons,75.9,9977,False
+Eulemur flavifrons,75.9,9975,False
+Eulemur flavifrons,75.9,9976,False
+Eulemur macaco,75.9,4221,True
+Eulemur macaco,75.9,3638,False
+Eulemur macaco,75.9,706,False
+Eulemur macaco,75.9,1007,False
+Eulemur macaco,75.9,926,False
+Eulemur macaco,75.9,9977,False
+Eulemur macaco,75.9,9975,False
+Eulemur macaco,75.9,9976,False
+Microcebus murinus,75.9,4221,True
+Microcebus murinus,75.9,3638,False
+Microcebus murinus,75.9,706,False
+Microcebus murinus,75.9,1007,False
+Microcebus murinus,75.9,926,False
+Microcebus murinus,75.9,9977,False
+Microcebus murinus,75.9,9975,False
+Microcebus murinus,75.9,9976,False
+Otolemur garnettii,75.9,4221,True
+Otolemur garnettii,75.9,3638,False
+Otolemur garnettii,75.9,706,False
+Otolemur garnettii,75.9,1007,False
+Otolemur garnettii,75.9,926,False
+Otolemur garnettii,75.9,9977,False
+Otolemur garnettii,75.9,9975,False
+Otolemur garnettii,75.9,9976,False
+Propithecus coquereli,75.9,4221,True
+Propithecus coquereli,75.9,3638,False
+Propithecus coquereli,75.9,706,False
+Propithecus coquereli,75.9,1007,False
+Propithecus coquereli,75.9,926,False
+Propithecus coquereli,75.9,9977,False
+Propithecus coquereli,75.9,9975,False
+Propithecus coquereli,75.9,9976,False
+Tarsius syrichta,67.6,4221,True
+Tarsius syrichta,67.6,3638,False
+Tarsius syrichta,67.6,706,False
+Tarsius syrichta,67.6,1007,False
+Tarsius syrichta,67.6,926,False
+Tarsius syrichta,67.6,9977,False
+Tarsius syrichta,67.6,9975,False
+Tarsius syrichta,67.6,9976,False
+Aotus nancymaae,43.1,4221,True
+Aotus nancymaae,43.1,3638,False
+Aotus nancymaae,43.1,706,False
+Aotus nancymaae,43.1,1007,False
+Aotus nancymaae,43.1,926,False
+Aotus nancymaae,43.1,9977,False
+Aotus nancymaae,43.1,9975,False
+Aotus nancymaae,43.1,9976,False
+Callithrix jacchus,43.1,4221,True
+Callithrix jacchus,43.1,3638,False
+Callithrix jacchus,43.1,706,False
+Callithrix jacchus,43.1,1007,False
+Callithrix jacchus,43.1,926,False
+Callithrix jacchus,43.1,9977,False
+Callithrix jacchus,43.1,9975,False
+Callithrix jacchus,43.1,9976,False
+Saimiri boliviensis,43.1,4221,True
+Saimiri boliviensis,43.1,3638,False
+Saimiri boliviensis,43.1,706,False
+Saimiri boliviensis,43.1,1007,False
+Saimiri boliviensis,43.1,926,False
+Saimiri boliviensis,43.1,9977,False
+Saimiri boliviensis,43.1,9975,False
+Saimiri boliviensis,43.1,9976,False
+Cercocebus atys,29.1,4221,True
+Cercocebus atys,29.1,3638,False
+Cercocebus atys,29.1,706,False
+Cercocebus atys,29.1,1007,False
+Cercocebus atys,29.1,926,False
+Cercocebus atys,29.1,9977,False
+Cercocebus atys,29.1,9975,False
+Cercocebus atys,29.1,9976,False
+Chlorocebus sabaeus,29.1,4221,True
+Chlorocebus sabaeus,29.1,3638,False
+Chlorocebus sabaeus,29.1,706,False
+Chlorocebus sabaeus,29.1,1007,False
+Chlorocebus sabaeus,29.1,926,False
+Chlorocebus sabaeus,29.1,9977,False
+Chlorocebus sabaeus,29.1,9975,False
+Chlorocebus sabaeus,29.1,9976,False
+Colobus angolensis palliatus,29.1,4221,True
+Colobus angolensis palliatus,29.1,3638,False
+Colobus angolensis palliatus,29.1,706,False
+Colobus angolensis palliatus,29.1,1007,False
+Colobus angolensis palliatus,29.1,926,False
+Colobus angolensis palliatus,29.1,9977,False
+Colobus angolensis palliatus,29.1,9975,False
+Colobus angolensis palliatus,29.1,9976,False
+Macaca fascicularis,29.1,4221,True
+Macaca fascicularis,29.1,3638,False
+Macaca fascicularis,29.1,706,False
+Macaca fascicularis,29.1,1007,False
+Macaca fascicularis,29.1,926,False
+Macaca fascicularis,29.1,9977,False
+Macaca fascicularis,29.1,9975,False
+Macaca fascicularis,29.1,9976,False
+Macaca mulatta,29.1,4221,True
+Macaca mulatta,29.1,3638,False
+Macaca mulatta,29.1,706,False
+Macaca mulatta,29.1,1007,False
+Macaca mulatta,29.1,926,False
+Macaca mulatta,29.1,9977,False
+Macaca mulatta,29.1,9975,False
+Macaca mulatta,29.1,9976,False
+Macaca mulatta lasiota,29.1,4221,True
+Macaca mulatta lasiota,29.1,3638,False
+Macaca mulatta lasiota,29.1,706,False
+Macaca mulatta lasiota,29.1,1007,False
+Macaca mulatta lasiota,29.1,926,False
+Macaca mulatta lasiota,29.1,9977,False
+Macaca mulatta lasiota,29.1,9975,False
+Macaca mulatta lasiota,29.1,9976,False
+Macaca nemestrina,29.1,4221,True
+Macaca nemestrina,29.1,3638,False
+Macaca nemestrina,29.1,706,False
+Macaca nemestrina,29.1,1007,False
+Macaca nemestrina,29.1,926,False
+Macaca nemestrina,29.1,9977,False
+Macaca nemestrina,29.1,9975,False
+Macaca nemestrina,29.1,9976,False
+Mandrillus leucophaeus,29.1,4221,False
+Mandrillus leucophaeus,29.1,3638,False
+Mandrillus leucophaeus,29.1,706,False
+Mandrillus leucophaeus,29.1,1007,False
+Mandrillus leucophaeus,29.1,926,False
+Mandrillus leucophaeus,29.1,9977,False
+Mandrillus leucophaeus,29.1,9975,False
+Mandrillus leucophaeus,29.1,9976,False
+Nasalis larvatus,29.1,4221,True
+Nasalis larvatus,29.1,3638,False
+Nasalis larvatus,29.1,706,False
+Nasalis larvatus,29.1,1007,False
+Nasalis larvatus,29.1,926,False
+Nasalis larvatus,29.1,9977,False
+Nasalis larvatus,29.1,9975,False
+Nasalis larvatus,29.1,9976,False
+Papio anubis,29.1,4221,True
+Papio anubis,29.1,3638,False
+Papio anubis,29.1,706,False
+Papio anubis,29.1,1007,False
+Papio anubis,29.1,926,False
+Papio anubis,29.1,9977,False
+Papio anubis,29.1,9975,False
+Papio anubis,29.1,9976,False
+Papio hamadryas,29.1,4221,True
+Papio hamadryas,29.1,3638,False
+Papio hamadryas,29.1,706,False
+Papio hamadryas,29.1,1007,False
+Papio hamadryas,29.1,926,False
+Papio hamadryas,29.1,9977,False
+Papio hamadryas,29.1,9975,False
+Papio hamadryas,29.1,9976,False
+Rhinopithecus roxellana,29.1,4221,True
+Rhinopithecus roxellana,29.1,3638,False
+Rhinopithecus roxellana,29.1,706,False
+Rhinopithecus roxellana,29.1,1007,False
+Rhinopithecus roxellana,29.1,926,False
+Rhinopithecus roxellana,29.1,9977,False
+Rhinopithecus roxellana,29.1,9975,False
+Rhinopithecus roxellana,29.1,9976,False
+Nomascus leucogenys,19.9,4221,True
+Nomascus leucogenys,19.9,3638,False
+Nomascus leucogenys,19.9,706,False
+Nomascus leucogenys,19.9,1007,False
+Nomascus leucogenys,19.9,926,False
+Nomascus leucogenys,19.9,9977,False
+Nomascus leucogenys,19.9,9975,False
+Nomascus leucogenys,19.9,9976,False
+Pongo abelii,15.8,4221,True
+Pongo abelii,15.8,3638,False
+Pongo abelii,15.8,706,False
+Pongo abelii,15.8,1007,False
+Pongo abelii,15.8,926,False
+Pongo abelii,15.8,9977,False
+Pongo abelii,15.8,9975,False
+Pongo abelii,15.8,9976,False
+Gorilla gorilla,8.9,4221,True
+Gorilla gorilla,8.9,3638,False
+Gorilla gorilla,8.9,706,False
+Gorilla gorilla,8.9,1007,False
+Gorilla gorilla,8.9,926,False
+Gorilla gorilla,8.9,9977,False
+Gorilla gorilla,8.9,9975,False
+Gorilla gorilla,8.9,9976,False
+Pan paniscus,6.6,4221,True
+Pan paniscus,6.6,3638,False
+Pan paniscus,6.6,706,False
+Pan paniscus,6.6,1007,False
+Pan paniscus,6.6,926,False
+Pan paniscus,6.6,9977,False
+Pan paniscus,6.6,9975,False
+Pan paniscus,6.6,9976,False
+Pan troglodytes,6.6,4221,True
+Pan troglodytes,6.6,3638,False
+Pan troglodytes,6.6,706,False
+Pan troglodytes,6.6,1007,False
+Pan troglodytes,6.6,926,False
+Pan troglodytes,6.6,9977,False
+Pan troglodytes,6.6,9975,False
+Pan troglodytes,6.6,9976,False
+Homo sapiens,0.0,4221,True
+Homo sapiens,0.0,3638,False
+Homo sapiens,0.0,706,False
+Homo sapiens,0.0,1007,False
+Homo sapiens,0.0,926,False
+Homo sapiens,0.0,9977,False
+Homo sapiens,0.0,9975,False
+Homo sapiens,0.0,9976,False
