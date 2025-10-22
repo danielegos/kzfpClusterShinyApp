@@ -5,6 +5,6 @@ account: danielegos
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 15798670
-bundleId: 11056250
+bundleId: 11061458
 url: https://danielegos.shinyapps.io/kzfpclustershinyapp/
 version: 1
