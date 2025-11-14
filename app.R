@@ -1,3 +1,5 @@
+# ATTEMPT FOR GITHUB 11-14-25
+
 library(shiny)
 library(dplyr)
 library(tidyr)
@@ -6,11 +8,39 @@ library(plotly)
 # =======================================================
 # Load datasets once at startup
 # =======================================================
+# df_label <- read.csv(
+#   "C:/Users/danie/Documents/nih_postbac/ShinyAppTronoData/df_Class.csv",
+#   check.names = FALSE,
+#   stringsAsFactors = FALSE
+# )
+
+# Species-based clusters
 df_label <- read.csv(
-  "data/df_clade.csv",
+  "data/df_wide.csv",
   check.names = FALSE,
   stringsAsFactors = FALSE
 )
+
+df2 <- read.csv(
+  "data/41586_2017_BFnature21683_MOESM103_ESM.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+df_pairs <- read.csv(
+  "data/gene_cluster_pairs.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+df_gnomAD <- read.csv(
+  "data/gnomAD_pli_oe_KZFP_genes.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+
+
 bool_cols2 <- 6:ncol(df_label)
 df_label[bool_cols2] <- lapply(df_label[bool_cols2], function(x) x == "True")
 
@@ -21,19 +51,31 @@ species_choices <- df_label %>%
 
 label_choices <- colnames(df_label)[6:ncol(df_label)]
 
+# Attempt to add gene_choices using df2
+gene_choices <- sort(unique(df2$Label), decreasing = TRUE)
+
 # =======================================================
 # UI
 # =======================================================
 ui <- fluidPage(
   titlePanel(
-    HTML("<h1>KZFP Conservation Viewer</h1><br>
-            <span style='font-size:16px; color:gray; font-style:italic;'>
-            Data adapted from Imbeault et al. (2017), DOI:
+    ("KZFP Conservation Viewer"),
+  ),
+  
+  absolutePanel(
+    top = 80, left = 300,
+    HTML("<span style='font-size:16px; color:gray; font-style:italic;'>
+            Data revisualized from Imbeault et al. (2017), DOI:
             <a href='https://doi.org/10.1038/nature21683' target='_blank' style='color:#8B008B; text-decoration:none;'>
             https://doi.org/10.1038/nature21683
             </a>
-            </span>")
+            </span>"),
+    
+    style = "z-index: 9999;"  # high z-index ensures it's on top
+    
   ),
+  
+  
   
   tabsetPanel(
     id = "tabs",
@@ -57,22 +99,22 @@ ui <- fluidPage(
         width = '300px'
       ),
       br(),
-     
+      
       # Two-column layout
       fluidRow(
         column(
-          width = 8,    # left side (e.g., plot)
+          width = 7,    # left side (e.g., plot)
           uiOutput("dynamicClusterTableUI")
-        ),
-        column(
-          width = 4,    # right side (e.g., summary/statistics)
-          br(),
-          br(),
-          br(),
-          br(),
-          
-          uiOutput("staticClusterPlotUI")
-        )
+        ) #,
+        # column(
+        #   width = 4,    # right side (e.g., summary/statistics)
+        #   br(),
+        #   br(),
+        #   br(),
+        #   br(),
+        #   
+        #   uiOutput("staticClusterPlotUI")
+        # )
       ),
       
       br(),
@@ -81,6 +123,10 @@ ui <- fluidPage(
       br(),
       br(),
       br(),
+      br(),
+      br(),
+      br(),
+      
       
       # Place Dynamic Plot below below
       fluidRow(
@@ -98,9 +144,9 @@ ui <- fluidPage(
       title = "View by Gene",
       br(),
       selectizeInput(
-        "selected_labels",
+        "selected_genes",
         "Select one or more Gene(s):",
-        choices = label_choices,
+        choices = gene_choices,
         selected = "ZNF777",
         multiple = TRUE,
         options = list(
@@ -109,6 +155,8 @@ ui <- fluidPage(
         ),
         width = '1500px'  # or '100%', '50%', etc.
       ),
+      br(),
+      br(),
       br(),
       br(),
       br(),
@@ -133,16 +181,27 @@ ui <- fluidPage(
     ),
     
     absolutePanel(
-      top = 324, left = 1046,
-      img(src = "kzfp_phylogeny.png", height = "44px")
+      # top = 324, left = 1046,
+      img(src = "kzfp_phylogeny_leftMargin.png", height = "44px"),
+      style = "top: 40%; left: 65%; z-index: 9999; background-color: rgba(255,255,255,0.9); padding: 0px; border-radius: 2px;"
+      
       # style = "z-index: 9999;"  # high z-index ensures it's on top
       
     ),
     
+    # Attempt to add static species plot in absolute panel
     absolutePanel(
-      top = 155, left = 315,
+      # top = 155, left = 315,
+      # uiOutput("speciesInfoPanel"),
+      uiOutput("staticClusterPlotUI"),
+      style = "top: 45%; left: 65%; z-index: 9999; background-color: rgba(255,255,255,0.9); padding: 0px; border-radius: 2px;"
+    ),
+    
+    
+    absolutePanel(
+      # top = 155, left = 315,
       uiOutput("speciesInfoPanel"),
-      style = "z-index: 9999; background-color: rgba(255,255,255,0.9); padding: 0px; border-radius: 8px;"
+      style = "top: 12%; left: 22%; z-index: 9999; background-color: rgba(255,255,255,0.9); padding: 0px; border-radius: 2px;"
     ),
     
     uiOutput("speciesImagePanel")
@@ -179,7 +238,7 @@ server <- function(input, output, session) {
     if(length(labels_true) == 0) return(NULL)
     
     sub <- df_label %>%
-      select(Species, Order, Clade, CommonName, timeFromHuman_MY, all_of(labels_true))
+      select(Species, Order, Class, CommonName, timeFromHuman_MY, all_of(labels_true))
     
     df_long <- sub %>%
       pivot_longer(
@@ -193,17 +252,17 @@ server <- function(input, output, session) {
       count(Label, name = "Frequency_T") %>%
       arrange(desc(Frequency_T), Label)
     
-    # Define the desired order of Cladees
-    Clade_order <- c("Coelacanth", "Amphibia", "Reptiles", "Birds", "Monotremes", "Marsupials", "Eutheria", "Primates")
+    # Define the desired order of Classes
+    # Class_order <- c("Coelacanth", "Amphibia", "Reptiles", "Birds", "Monotremes", "Marsupials", "Eutheria", "Primates")
     
-    # Convert Clade column to an ordered factor first
-    df_long$Clade <- factor(df_long$Clade, levels = Clade_order, ordered = TRUE)
+    # Convert Class column to an ordered factor first
+    # df_long$Class <- factor(df_long$Class, levels = Class_order, ordered = TRUE)
     
     
     df_sorted <- df_long %>%
-      # arrange(desc(timeFromHuman_MY), Species, Label)
-      # Change to sort by Clade first
-      arrange(Clade, desc(timeFromHuman_MY), Species, Label)
+      arrange(desc(timeFromHuman_MY), Species, Label)
+    # Change to sort by Class first
+    # arrange(Class, desc(timeFromHuman_MY), Species, Label)
     
     df_sorted$Label <- factor(df_sorted$Label, levels = rev(label_freq$Label), ordered = TRUE)
     df_sorted$Species <- factor(df_sorted$Species, levels = unique(df_sorted$Species), ordered = TRUE)
@@ -222,10 +281,10 @@ server <- function(input, output, session) {
     )
     
     div(
-      style = "width: 900px; max-width: 90%; margin: 0 auto;",  # fixed width + responsive max + centered
+      style = "width: 700px; max-width: 90%; margin: 0 auto;",  # fixed width + responsive max + centered
       tagList(
         h2(HTML(paste("KZFP Gene Conservation for <i>", species_row$Species[1], "</i> — ", species_row$CommonName[1]))),
-        p(strong("Clade:"), species_row$Clade[1], strong("| Order:"), species_row$Order[1], strong("| Time from Human:"), species_row$timeFromHuman_MY[1], "million years")
+        p(strong("Class:"), species_row$Class[1], strong("| Order:"), species_row$Order[1], strong("| Time from Human:"), species_row$timeFromHuman_MY[1], "million years")
         # img(src = "kzfp_phylogeny.png", height = "40px", style = "display:block;margin:auto;")
       )
     )
@@ -247,11 +306,17 @@ server <- function(input, output, session) {
     
     # Display only on the "View by Species" tab
     if (input$tabs == "View by Species") {
+      # absolutePanel(
+      #   top = 160, left = 1220,
+      #   img(src = img_file, height = "150px"),
+      #   style = "z-index: 9999;"
+      # )
+      
       absolutePanel(
-        top = 160, left = 1220,
         img(src = img_file, height = "150px"),
-        style = "z-index: 9999;"
+        style = "top: 20%; left: 70%; z-index: 9999;"
       )
+      
     }
   })
   
@@ -283,7 +348,7 @@ server <- function(input, output, session) {
     df <- filtered_species_data()
     n_rows <- length(unique(df$Label))
     # plot_height <- max(400, n_rows * 15)  # 15px per row, minimum 400px
-    plotlyOutput("staticClusterPlot", width = "100%", height = "200px")
+    plotlyOutput("staticClusterPlot", width = "479px", height = "180px")
   })
   
   output$clusterPlot <- renderPlotly({
@@ -311,7 +376,7 @@ server <- function(input, output, session) {
       text = ~paste(
         "Species:", Species,
         "<br>Order:", Order,
-        "<br>Clade:", Clade,
+        "<br>Class:", Class,
         "<br>Common Name:", CommonName,
         "<br>Label:", Label,
         "<br>Present:", present,
@@ -331,12 +396,12 @@ server <- function(input, output, session) {
           tickangle = 60,
           tickfont = list(
             size = 5
-            # color = Clade_colors[Aves]
+            # color = Class_colors[Aves]
           ),
           automargin = TRUE
         ),
         yaxis = list(
-          title = "Label",
+          title = "KRAB-ZFP",
           tickfont = list(size = 10),
           automargin = TRUE
         ),
@@ -351,32 +416,112 @@ server <- function(input, output, session) {
       need(!is.null(df), paste("No labeled KZFP genes found for", input$selected_species))
     )
     
-    # --- Summarize by Label ---
-    df_summary <- df %>%
-      dplyr::group_by(Label) %>%
-      dplyr::summarise(
-        # Species = first(Species),
-        # CommonName = first(CommonName),
-        # Order = first(Order),
-        # Clade = first(Clade),
-        PresentCount = sum(present == TRUE, na.rm = TRUE),
-        # timeFromHuman_MY = mean(timeFromHuman_MY, na.rm = TRUE)
-        PercentConserved = paste0(round(100 * PresentCount / n(), 1), "%")
+    
+    cat("\nHEAD of original df from filtered_species_data():\n")
+    print(head(df))
+    
+    df <- df %>%
+      rename(
+        Cluster = Label
+      )
+    
+    cat("\nHEAD of original df with renamed Label column to Cluster:\n")
+    print(head(df))
+    
+    
+    cat("\n===== START: Adding gene labels to df =====\n")
+    
+    # -----------------------------------------
+    # STEP 1 — Ensure both cluster columns are the same type
+    # -----------------------------------------
+    
+    cat("\nConverting df$Cluster and df2$`Cluster #` to character...\n")
+    
+    df <- df %>%
+      mutate(Cluster = as.character(Cluster))
+    
+    df_pairs <- df_pairs %>%
+      mutate(`Cluster #` = as.character(`Cluster #`))
+    
+    cat("\ndf Cluster type:\n"); print(str(df$Cluster))
+    cat("\ndf_pairs Cluster # type:\n"); print(str(df_pairs$`Cluster #`))
+    
+    
+    # -----------------------------------------
+    # STEP 2 — Join gene labels into df
+    # df$Cluster  <-->  df_pairs$`Cluster #`
+    # Creates one row per gene label
+    # -----------------------------------------
+    
+    cat("\nJoining df with df_pairs to add GeneLabel...\n")
+    
+    df_new <- df %>%
+      left_join(
+        df_pairs %>% select(GeneLabel = Label, `Cluster #`),
+        by = c("Cluster" = "Cluster #"),
+        relationship = "many-to-many"
+      )
+    
+    cat("\nHEAD of df_new (expanded rows):\n")
+    print(head(df_new))
+    
+    
+    df_summary <- df_new %>%
+      # ensure each gene counts at most once per species
+      group_by(GeneLabel, Species) %>%
+      summarise(
+        present_any = any(present == TRUE),
+        .groups = "drop"
       ) %>%
-      dplyr::ungroup() %>%
-      dplyr::arrange(desc(PresentCount), Label)  # ✅ sort by conservation, then alphabetically by gene
+      # now summarize across all species
+      group_by(GeneLabel) %>%
+      summarise(
+        PresentCount = sum(present_any),
+        PercentConserved = paste0(
+          round(100 * PresentCount / n(), 1), "%"
+        ),
+        .groups = "drop"
+      ) %>%
+      arrange(desc(PresentCount), GeneLabel)
+    
+    cat("\nHEAD of df_summary:\n")
+    
+    print(head(df_summary))
+    
+    
+    df_merged <- df_summary %>%
+      inner_join(df_gnomAD, by = c("GeneLabel" = "gene"))
+    
+    df_merged <- df_merged %>%
+      mutate(
+        gnomad_link = paste0(
+          "https://gnomad.broadinstitute.org/gene/",
+          `Gene ID`,
+          "?dataset=gnomad_r4"
+        )
+      )
+    
+    cat("\nHEAD of df_merged:\n")
+    
+    print(head(df_merged))
+    
+    
     
     # --- Reorder/select columns ---
-    df_display <- df_summary %>%
+    df_display <- df_merged %>%
       dplyr::select(
-        `Gene Label` = Label,
-        `Number of Species with Gene` = PresentCount,
-        `Percent Conserved - All Species` = PercentConserved
+        `Gene` = GeneLabel,
+        `Number of Species with a KRAB-ZFP Cluster Associated with this Gene` = PresentCount,
+        `Percent Conserved - All Species` = PercentConserved,
+        `Gene ID` = `Gene ID`,
+        `pLI` = pLI,
+        `o/e` = oe,
+        `GnomAD Link` = gnomad_link
         # Label,
         # # Species,
         # # CommonName,
         # # Order,
-        # # Clade,
+        # # Class,
         # PresentCount
         # # timeFromHuman_MY
       )
@@ -400,10 +545,13 @@ server <- function(input, output, session) {
           list(className = 'dt-center', targets = "_all")
         )
       )
-    ) 
+    )
     # |>
     #   DT::formatRound(columns = "timeFromHuman_MY", digits = 2)
   })
+  
+  
+  
   
   output$staticClusterPlot <- renderPlotly({
     df <- filtered_species_data()
@@ -430,7 +578,7 @@ server <- function(input, output, session) {
       text = ~paste(
         "Species:", Species,
         "<br>Order:", Order,
-        "<br>Clade:", Clade,
+        "<br>Class:", Class,
         "<br>Common Name:", CommonName,
         "<br>Label:", Label,
         "<br>Present:", present,
@@ -452,12 +600,12 @@ server <- function(input, output, session) {
           # tickangle = 60,
           # tickfont = list(
           #   size = 5
-          #   # color = Clade_colors[Aves]
+          #   # color = Class_colors[Aves]
           # ),
           # automargin = TRUE
         ),
         yaxis = list(
-          title = "Gene",
+          title = "KRAB-ZFP",
           showticklabels = FALSE
           
           # tickfont = list(size = 10),
@@ -470,47 +618,89 @@ server <- function(input, output, session) {
   # -------------------------------
   # Tab 2: View by Label / Gene
   # -------------------------------
+  
+  
+  # Attempt to clear the issue
   filtered_label_data <- reactive({
-    req(input$selected_labels)
-    selected <- input$selected_labels
+    req(input$selected_genes)
     
+    cat("\n---- filtered_label_data START ----\n")
+    
+    selected_gene_list <- input$selected_genes
+    cat("selected_gene_list:\n")
+    print(selected_gene_list)
+    
+    # 1. Get cluster numbers for the selected genes
+    clusters <- unique(df2$`Cluster #`[df2$Label %in% selected_gene_list])
+    cat("\nClusters found:\n")
+    print(clusters)
+    
+    # 2. Convert clusters to character column names
+    cluster_cols <- as.character(clusters)
+    
+    cat("\nCluster column names to extract from df_label:\n")
+    print(cluster_cols)
+    
+    # 3. Check which exist
+    valid_cluster_cols <- intersect(cluster_cols, colnames(df_label))
+    
+    cat("\nValid cluster columns in df_label:\n")
+    print(valid_cluster_cols)
+    
+    req(length(valid_cluster_cols) > 0)
+    
+    # 4. Subset df_label by cluster columns
     sub <- df_label %>%
-      select(Species, Order, Clade, CommonName, timeFromHuman_MY, all_of(selected))
+      dplyr::select(
+        Species, Order, Class, CommonName, timeFromHuman_MY,
+        dplyr::all_of(valid_cluster_cols)
+      )
     
+    cat("\nSub dataframe columns:\n")
+    print(colnames(sub))
+    
+    # 5. Pivot longer
     df_long <- sub %>%
-      pivot_longer(
-        cols = all_of(selected),
-        names_to = "Label",
+      tidyr::pivot_longer(
+        cols = dplyr::all_of(valid_cluster_cols),
+        names_to = "Cluster",
         values_to = "present"
       )
     
-    label_freq <- df_long %>%
-      filter(present == TRUE) %>%
-      count(Label, name = "Frequency_T") %>%
-      arrange(desc(Frequency_T), Label)
+    cat("\npivot_longer result preview:\n")
+    print(head(df_long))
     
-    # Define the desired order of Cladees
-    Clade_order <- c("Coelacanth", "Amphibia", "Reptiles", "Birds", "Monotremes", "Marsupials", "Eutheria", "Primates")
+    # 6. Frequency table
+    cluster_freq <- df_long %>%
+      dplyr::filter(present == TRUE) %>%
+      dplyr::count(Cluster, name = "Frequency_T") %>%
+      dplyr::arrange(dplyr::desc(Frequency_T), Cluster)
     
-    # Convert Clade column to an ordered factor first
-    df_long$Clade <- factor(df_long$Clade, levels = Clade_order, ordered = TRUE)
+    cat("\nCluster frequency table:\n")
+    print(cluster_freq)
     
-    
+    # 7. Sort df
     df_sorted <- df_long %>%
-      # arrange(desc(timeFromHuman_MY), Species, Label)
-      # Change to sort by Clade first
-      arrange(Clade, desc(timeFromHuman_MY), Species, Label)
+      dplyr::arrange(dplyr::desc(timeFromHuman_MY), Species, Cluster)
     
-    df_sorted$Label <- factor(df_sorted$Label, levels = rev(label_freq$Label), ordered = TRUE)
+    cat("\nSorted df preview:\n")
+    print(head(df_sorted))
+    
+    # 8. Factor ordering
+    df_sorted$Cluster <- factor(df_sorted$Cluster, levels = rev(cluster_freq$Cluster), ordered = TRUE)
     df_sorted$Species <- factor(df_sorted$Species, levels = unique(df_sorted$Species), ordered = TRUE)
+    
+    cat("\n---- filtered_label_data END ----\n")
     
     df_sorted
   })
   
+  
+  
   # Dynamic UI for label plot height
   output$dynamicLabelPlotUI <- renderUI({
     df <- filtered_label_data()
-    n_rows <- length(unique(df$Label))
+    n_rows <- length(unique(df$Cluster))
     plot_height <- max(600, n_rows * 50)  # 15px per row, minimum 400px
     plotlyOutput("labelPlot", width = "1500px", height = paste0(plot_height, "px"))
   })
@@ -523,7 +713,7 @@ server <- function(input, output, session) {
     plot_ly(
       data = df,
       x = ~Species,
-      y = ~Label,
+      y = ~Cluster,
       z = ~present_num,
       type = "heatmap",
       colors = c("lightgrey", "violetred4"),
@@ -531,9 +721,9 @@ server <- function(input, output, session) {
       text = ~paste(
         "Species:", Species,
         "<br>Order:", Order,
-        "<br>Clade:", Clade,
+        "<br>Class:", Class,
         "<br>Common Name:", CommonName,
-        "<br>Label:", Label,
+        "<br>Cluster:", Cluster,
         "<br>Present:", present,
         "<br>Time from Human (MY):", timeFromHuman_MY
       ),
@@ -542,7 +732,7 @@ server <- function(input, output, session) {
     ) %>%
       layout(
         title = list(
-          text = "Conservation of Selected KZFP Genes",
+          text = "Conservation of Selected KRAB-ZFPs Across Vertebrate Species",
           x = 0.05,
           font = list(size = 20)
         ),
@@ -553,7 +743,7 @@ server <- function(input, output, session) {
           automargin = TRUE
         ),
         yaxis = list(
-          title = "Gene",
+          title = "KRAB-ZFP",
           tickfont = list(size = 10),
           automargin = TRUE
         ),
@@ -566,4 +756,3 @@ server <- function(input, output, session) {
 # Run App
 # =======================================================
 shinyApp(ui, server)
-
