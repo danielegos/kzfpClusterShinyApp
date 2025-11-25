@@ -1,9 +1,12 @@
-# ATTEMPT FOR GITHUB 11-14-25
+# ATTEMPT FOR GITHUB 11-25-25
+
+# TODO: Pre-compute the table since the gene information doesn't change; just display the genes that are associated with a cluster for a given species
 
 library(shiny)
 library(dplyr)
 library(tidyr)
 library(plotly)
+library(ggplot2)
 
 # =======================================================
 # Load datasets once at startup
@@ -21,12 +24,6 @@ df_label <- read.csv(
   stringsAsFactors = FALSE
 )
 
-df2 <- read.csv(
-  "data/41586_2017_BFnature21683_MOESM103_ESM.csv",
-  check.names = FALSE,
-  stringsAsFactors = FALSE
-)
-
 df_pairs <- read.csv(
   "data/gene_cluster_pairs.csv",
   check.names = FALSE,
@@ -35,6 +32,12 @@ df_pairs <- read.csv(
 
 df_gnomAD <- read.csv(
   "data/gnomAD_pli_oe_KZFP_genes.csv",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+df_table <- read.csv(
+  "data/df_collapsed_stringified.csv",
   check.names = FALSE,
   stringsAsFactors = FALSE
 )
@@ -51,8 +54,8 @@ species_choices <- df_label %>%
 
 label_choices <- colnames(df_label)[6:ncol(df_label)]
 
-# Attempt to add gene_choices using df2
-gene_choices <- sort(unique(df2$Label), decreasing = TRUE)
+# Attempt to add gene_choices using df_pairs
+gene_choices <- sort(unique(df_pairs$Label), decreasing = TRUE)
 
 # =======================================================
 # UI
@@ -90,6 +93,7 @@ ui <- fluidPage(
       selectizeInput(
         "selected_species",
         "Select or type species name or common name:",
+        selected = "Mus musculus",
         choices = setNames(species_choices$Species, species_choices$label),
         multiple = FALSE,
         options = list(
@@ -103,7 +107,7 @@ ui <- fluidPage(
       # Two-column layout
       fluidRow(
         column(
-          width = 7,    # left side (e.g., plot)
+          width = 10,    # left side (e.g., plot)
           uiOutput("dynamicClusterTableUI")
         ) #,
         # column(
@@ -122,10 +126,8 @@ ui <- fluidPage(
       br(),
       br(),
       br(),
-      br(),
-      br(),
-      br(),
-      br(),
+      
+      
       
       
       # Place Dynamic Plot below below
@@ -174,7 +176,7 @@ ui <- fluidPage(
     condition = "input.tabs == 'View by Species'",
     
     absolutePanel(
-      top = 605, left = 165,
+      top = 950, left = 165,
       img(src = "kzfp_phylogeny.png", height = "133px"),
       style = "z-index: 9999;"  # high z-index ensures it's on top
       
@@ -182,8 +184,8 @@ ui <- fluidPage(
     
     absolutePanel(
       # top = 324, left = 1046,
-      img(src = "kzfp_phylogeny_leftMargin.png", height = "44px"),
-      style = "top: 40%; left: 65%; z-index: 9999; background-color: rgba(255,255,255,0.9); padding: 0px; border-radius: 2px;"
+      img(src = "kzfp_phylogeny_leftMargin.png", height = "30px"),
+      style = "top: 40%; left: 85%; z-index: 9999; background-color: rgba(255,255,255,0.9); padding: 0px; border-radius: 2px;"
       
       # style = "z-index: 9999;"  # high z-index ensures it's on top
       
@@ -194,7 +196,7 @@ ui <- fluidPage(
       # top = 155, left = 315,
       # uiOutput("speciesInfoPanel"),
       uiOutput("staticClusterPlotUI"),
-      style = "top: 45%; left: 65%; z-index: 9999; background-color: rgba(255,255,255,0.9); padding: 0px; border-radius: 2px;"
+      style = "top: 45%; left: 85%; z-index: 9999; background-color: rgba(255,255,255,0.9); padding: 0px; border-radius: 2px;"
     ),
     
     
@@ -314,7 +316,7 @@ server <- function(input, output, session) {
       
       absolutePanel(
         img(src = img_file, height = "150px"),
-        style = "top: 20%; left: 70%; z-index: 9999;"
+        style = "top: 20%; left: 85%; z-index: 9999;"
       )
       
     }
@@ -336,7 +338,7 @@ server <- function(input, output, session) {
     )
     
     n_rows <- nrow(df)
-    table_height <- 330  # 20px per row, min 200px
+    table_height <- 750  # 20px per row, min 200px
     div(
       style = paste0("height:", table_height, "px; overflow-y:auto;"),
       DT::dataTableOutput("clusterTable", width = "100%")
@@ -348,7 +350,7 @@ server <- function(input, output, session) {
     df <- filtered_species_data()
     n_rows <- length(unique(df$Label))
     # plot_height <- max(400, n_rows * 15)  # 15px per row, minimum 400px
-    plotlyOutput("staticClusterPlot", width = "479px", height = "180px")
+    plotOutput("staticClusterPlot", width = "300px", height = "180px")
   })
   
   output$clusterPlot <- renderPlotly({
@@ -410,110 +412,30 @@ server <- function(input, output, session) {
   })
   
   output$clusterTable <- DT::renderDataTable({
-    df <- filtered_species_data()
-    
-    validate(
-      need(!is.null(df), paste("No labeled KZFP genes found for", input$selected_species))
-    )
-    
-    
-    cat("\nHEAD of original df from filtered_species_data():\n")
-    print(head(df))
-    
-    df <- df %>%
-      rename(
-        Cluster = Label
-      )
-    
-    cat("\nHEAD of original df with renamed Label column to Cluster:\n")
-    print(head(df))
-    
-    
-    cat("\n===== START: Adding gene labels to df =====\n")
-    
-    # -----------------------------------------
-    # STEP 1 — Ensure both cluster columns are the same type
-    # -----------------------------------------
-    
-    cat("\nConverting df$Cluster and df2$`Cluster #` to character...\n")
-    
-    df <- df %>%
-      mutate(Cluster = as.character(Cluster))
-    
-    df_pairs <- df_pairs %>%
-      mutate(`Cluster #` = as.character(`Cluster #`))
-    
-    cat("\ndf Cluster type:\n"); print(str(df$Cluster))
-    cat("\ndf_pairs Cluster # type:\n"); print(str(df_pairs$`Cluster #`))
-    
-    
-    # -----------------------------------------
-    # STEP 2 — Join gene labels into df
-    # df$Cluster  <-->  df_pairs$`Cluster #`
-    # Creates one row per gene label
-    # -----------------------------------------
-    
-    cat("\nJoining df with df_pairs to add GeneLabel...\n")
-    
-    df_new <- df %>%
-      left_join(
-        df_pairs %>% select(GeneLabel = Label, `Cluster #`),
-        by = c("Cluster" = "Cluster #"),
-        relationship = "many-to-many"
-      )
-    
-    cat("\nHEAD of df_new (expanded rows):\n")
-    print(head(df_new))
-    
-    
-    df_summary <- df_new %>%
-      # ensure each gene counts at most once per species
-      group_by(GeneLabel, Species) %>%
-      summarise(
-        present_any = any(present == TRUE),
-        .groups = "drop"
-      ) %>%
-      # now summarize across all species
-      group_by(GeneLabel) %>%
-      summarise(
-        PresentCount = sum(present_any),
-        PercentConserved = paste0(
-          round(100 * PresentCount / n(), 1), "%"
-        ),
-        .groups = "drop"
-      ) %>%
-      arrange(desc(PresentCount), GeneLabel)
-    
-    cat("\nHEAD of df_summary:\n")
-    
-    print(head(df_summary))
-    
-    
-    df_merged <- df_summary %>%
-      inner_join(df_gnomAD, by = c("GeneLabel" = "gene"))
-    
-    df_merged <- df_merged %>%
+    df_table <- df_table %>%
       mutate(
         gnomad_link = paste0(
           "https://gnomad.broadinstitute.org/gene/",
-          `Gene ID`,
+          `gene_id`,
           "?dataset=gnomad_r4"
         )
       )
     
-    cat("\nHEAD of df_merged:\n")
-    
-    print(head(df_merged))
+    df_table <- df_table %>%
+      mutate(
+        percent_conserved = num_species_w_cluster_associated_with_gene / 191
+      )
     
     
     
     # --- Reorder/select columns ---
-    df_display <- df_merged %>%
+    df_display <- df_table %>%
       dplyr::select(
-        `Gene` = GeneLabel,
-        `Number of Species with a KRAB-ZFP Cluster Associated with this Gene` = PresentCount,
-        `Percent Conserved - All Species` = PercentConserved,
-        `Gene ID` = `Gene ID`,
+        `Gene` = gene,
+        `Species with a KRAB-ZFP Cluster Associated with Gene` = num_species_w_cluster_associated_with_gene,
+        `Percent Conserved - All Species` = percent_conserved,
+        `Clusters Associated with Gene` = Cluster_str,
+        `Gene ID` = gene_id,
         `pLI` = pLI,
         `o/e` = oe,
         `GnomAD Link` = gnomad_link
@@ -526,6 +448,18 @@ server <- function(input, output, session) {
         # # timeFromHuman_MY
       )
     
+    df_display$`GnomAD Link` <- paste0(
+      "<a href='", df_display$`GnomAD Link`, 
+      "' target='_blank'>View in gnomAD</a>"
+    )
+    
+    df_display$`Percent Conserved - All Species` <-
+      scales::percent(df_display$`Percent Conserved - All Species`, accuracy = 0.1)
+    
+    df_display$pLI <- sprintf("%.3f", df_display$pLI)
+    df_display$`o/e` <- sprintf("%.3f", df_display$`o/e`)
+    
+    
     # --- Display as a datatable ---
     DT::datatable(
       df_display,
@@ -534,10 +468,11 @@ server <- function(input, output, session) {
         'Table 1: KZFP Gene Conservation Summary'
       ),
       
+      escape = FALSE,
       rownames = FALSE,
       options = list(
         scrollY = TRUE,
-        pageLength = 5,
+        pageLength = 8,
         autoWidth = TRUE,
         dom = 'tp',
         order = list(list(1, 'desc'), list(0, 'asc')),  # ✅ UI sort: PresentCount desc, Label asc
@@ -553,7 +488,7 @@ server <- function(input, output, session) {
   
   
   
-  output$staticClusterPlot <- renderPlotly({
+  output$staticClusterPlot <- renderPlot({
     df <- filtered_species_data()
     index <- which(df$Species == input$selected_species)
     
@@ -565,54 +500,24 @@ server <- function(input, output, session) {
     # req(df)
     df$present_num <- as.numeric(df$present)
     
-    # --- Main heatmap ---
-    # heatmap_plot <-
-    plot_ly(
-      data = df,
-      x = ~Species,
-      y = ~Label,
-      z = ~present_num,
-      type = "heatmap",
-      colors = c("lightgrey", "violetred4"),
-      opacity = 1,
-      text = ~paste(
-        "Species:", Species,
-        "<br>Order:", Order,
-        "<br>Class:", Class,
-        "<br>Common Name:", CommonName,
-        "<br>Label:", Label,
-        "<br>Present:", present,
-        "<br>Time from Human (MY):", timeFromHuman_MY
-      ),
-      hoverinfo = "text",
-      showscale = FALSE
-    ) %>%
-      layout(
-        # title = list(
-        #   text = paste0("KZFP Gene Conservation for <i>", input$selected_species, "</i> — ", df$CommonName[index]),
-        #   x = 0.05,
-        #   font = list(size = 20)
-        # ),
-        xaxis = list(
-          title = "Species",
-          showticklabels = FALSE
-          # showgrid = FALSE,
-          # tickangle = 60,
-          # tickfont = list(
-          #   size = 5
-          #   # color = Class_colors[Aves]
-          # ),
-          # automargin = TRUE
-        ),
-        yaxis = list(
-          title = "KRAB-ZFP",
-          showticklabels = FALSE
-          
-          # tickfont = list(size = 10),
-          # automargin = TRUE
-        ),
-        margin = list(l = 0, r = 20, b = 0, t = 0)
+    
+    ggplot(df, aes(x = Species, y = factor(Label))) +
+      geom_tile(aes(fill = present), alpha = 1.0) +  # alpha outside aes()
+      scale_fill_manual(values = c("lightgrey", "violetred4")) +
+      theme(
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.x  = element_blank(),
+        axis.text.y  = element_blank(),
+        axis.ticks   = element_blank(),
+        legend.position = "none"
       )
+    
+    
+    
+    
+    
+    
   })
   
   # -------------------------------
@@ -630,8 +535,9 @@ server <- function(input, output, session) {
     cat("selected_gene_list:\n")
     print(selected_gene_list)
     
+    
     # 1. Get cluster numbers for the selected genes
-    clusters <- unique(df2$`Cluster #`[df2$Label %in% selected_gene_list])
+    clusters <- unique(df_pairs$`Cluster #`[df_pairs$Label %in% selected_gene_list])
     cat("\nClusters found:\n")
     print(clusters)
     
@@ -756,3 +662,4 @@ server <- function(input, output, session) {
 # Run App
 # =======================================================
 shinyApp(ui, server)
+
