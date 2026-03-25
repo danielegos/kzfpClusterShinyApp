@@ -1,4 +1,4 @@
-# ATTEMPT FOR GITHUB 12-2-25
+# 3-25-26 Update
 
 # TODO: add ALL genes to table, make pretty UI
 
@@ -53,22 +53,277 @@ gene_choices <- sort(unique(df_pairs$Label), decreasing = TRUE)
 # =======================================================
 # UI
 # =======================================================
-ui <- fluidPage(
-  titlePanel(
-    ("KZFP Conservation Viewer"),
+ui = tagList(
+  # shinythemes::themeSelector(),
+  navbarPage(
+    # theme = "cerulean",  # <--- To use a theme, uncomment this
+    "KZFP Conservation Viewer",
+    tabPanel("View by Species",
+             sidebarPanel(
+               width=3,
+               tags$h5("Data revisualized from Imbeault et al. (2017)."),
+               tags$h5(
+                 "DOI: ",
+                 tags$a(
+                   href = "https://doi.org/10.1038/nature21683",
+                   target = "_blank",
+                   "10.1038/nature21683"
+                 )
+               ),
+               
+               # Selectize input
+               selectizeInput(
+                 "selected_species",
+                 "Select or type species name or common name:",
+                 selected = "Mus musculus",
+                 choices = setNames(species_choices$Species, species_choices$label),
+                 multiple = FALSE,
+                 options = list(
+                   placeholder = 'Type species or common name...',
+                   maxItems = 1
+                 ),
+                 # width = '300px'
+               ),
+               
+               # Species image
+               uiOutput("speciesImagePanel"),
+               # 
+               # # hardcode for example
+               # tags$img(
+               #   src = "Mus musculus.png",  # file inside www/
+               #   height = "150px",
+               #   style = "display: block; margin: 10px auto;"
+               # ),
+               uiOutput("speciesInfoPanel"),
+               
+               # Add checkbox option for "Compact Plot" mode <----------------
+               checkboxInput("show_compact_clustFig", "Show compact cluster figure", value = FALSE)
+               
+      
+               
+               # fileInput("file", "File input:"),
+               # textInput("txt", "Text input:", "general"),
+               # sliderInput("slider", "Slider input:", 1, 100, 30),
+               # tags$h5("Default actionButton:"),
+               # actionButton("action", "Search"),
+               # 
+               # tags$h5("actionButton with CSS class:"),
+               # actionButton("action2", "Action button", class = "btn-primary")
+             ),
+             
+             mainPanel(
+               # tabsetPanel(
+               #   tabPanel("Tab 1",
+               #            h4("Table"),
+               #            tableOutput("table"),
+               #            h4("Verbatim text output"),
+               #            verbatimTextOutput("txtout"),
+               #            h1("Header 1"),
+               #            h2("Header 2"),
+               #            h3("Header 3"),
+               #            h4("Header 4"),
+               #            h5("Header 5")
+               #   ),
+               #   tabPanel("Tab 2", "This panel is intentionally left blank"),
+               #   tabPanel("Tab 3", "This panel is intentionally left blank")
+               # )
+               
+               tabsetPanel(
+                 id = "tabs",
+                 type = "tabs",
+                 
+                 # ---------------------------------------------------
+                 # TAB 1: View by Species
+                 # ---------------------------------------------------
+                 tabPanel(
+                   title = "Summary Table",
+                   # br(),
+                   # # selectizeInput(
+                   # #   "selected_species",
+                   # #   "Select or type species name or common name:",
+                   # #   selected = "Mus musculus",
+                   # #   choices = setNames(species_choices$Species, species_choices$label),
+                   # #   multiple = FALSE,
+                   # #   options = list(
+                   # #     placeholder = 'Type species or common name...',
+                   # #     maxItems = 1
+                   # #   ),
+                   # #   width = '300px'
+                   # # ),
+                   # br(),
+                   # br(),
+                   # 
+                   # Two-column layout
+                   fluidRow(
+                     column(
+                       width = 12,    # left side (e.g., plot)
+                       uiOutput("dynamicClusterTableUI")
+                     ) 
+                   )
+                
+                   
+                   
+                 ),
+
+                 # ---------------------------------------------------
+                 # TAB 2: View by Label / Gene
+                 # ---------------------------------------------------
+                 tabPanel(
+                   title = "Species Cluster Plot",
+                   fluidRow(
+                     column(
+                       width = 12,
+                       plotlyOutput("combinedPlot", height = "8000px")
+                     )
+                   )
+                 )
+
+               ),
+               
+               
+             )
+    ),
+    tabPanel("View by Gene",
+             sidebarPanel(
+               width=3,
+               tags$h5("Data revisualized from Imbeault et al. (2017)."),
+               tags$h5(
+                 "DOI: ",
+                 tags$a(
+                   href = "https://doi.org/10.1038/nature21683",
+                   target = "_blank",
+                   "10.1038/nature21683"
+                 )
+               ),
+               selectizeInput(
+                 "selected_genes",
+                 "Select one or more Gene(s):",
+                 choices = gene_choices,
+                 selected = "ZNF777",
+                 multiple = TRUE,
+                 options = list(
+                   placeholder = "Type to search for genes...",
+                   maxItems = NULL
+                 ),
+                 # width = '1500px'  # or '100%', '50%', etc.
+               ),
+               # Add checkbox option for "Compact Plot" mode <----------------
+               
+               
+               # fileInput("file", "File input:"),
+               # textInput("txt", "Text input:", "general"),
+               # sliderInput("slider", "Slider input:", 1, 100, 30),
+               # tags$h5("Default actionButton:"),
+               # actionButton("action", "Search"),
+               # 
+               # tags$h5("actionButton with CSS class:"),
+               # actionButton("action2", "Action button", class = "btn-primary")
+             ),
+             
+             mainPanel(
+               # tabsetPanel(
+               #   tabPanel("Tab 1",
+               #            h4("Table"),
+               #            tableOutput("table"),
+               #            h4("Verbatim text output"),
+               #            verbatimTextOutput("txtout"),
+               #            h1("Header 1"),
+               #            h2("Header 2"),
+               #            h3("Header 3"),
+               #            h4("Header 4"),
+               #            h5("Header 5")
+               #   ),
+               #   tabPanel("Tab 2", "This panel is intentionally left blank"),
+               #   tabPanel("Tab 3", "This panel is intentionally left blank")
+               # )
+               
+               tabsetPanel(
+                 id = "tabs",
+                 type = "tabs",
+                 
+                 # # ---------------------------------------------------
+                 # # TAB 1: View by Species
+                 # # ---------------------------------------------------
+                 # tabPanel(
+                 #   title = "View by Species",
+                 #   br(),
+                 #   selectizeInput(
+                 #     "selected_species",
+                 #     "Select or type species name or common name:",
+                 #     selected = "Mus musculus",
+                 #     choices = setNames(species_choices$Species, species_choices$label),
+                 #     multiple = FALSE,
+                 #     options = list(
+                 #       placeholder = 'Type species or common name...',
+                 #       maxItems = 1
+                 #     ),
+                 #     width = '300px'
+                 #   ),
+                 #   br(),
+                 #   br(),
+                 #   
+                 #   # Two-column layout
+                 #   fluidRow(
+                 #     column(
+                 #       width = 12,    # left side (e.g., plot)
+                 #       uiOutput("dynamicClusterTableUI")
+                 #     ) 
+                 #   ),
+                 #   
+                 #   br(),
+                 #   br(),
+                 #   br(),
+                 #   
+                 #   fluidRow(
+                 #     column(
+                 #       width = 12,
+                 #       plotlyOutput("combinedPlot", height = "8000px")
+                 #     )
+                 #   )
+                 # ),
+                 
+                 # ---------------------------------------------------
+                 # TAB 2: View by Label / Gene
+                 # ---------------------------------------------------
+                 tabPanel(
+                   title = "Gene Cluster Plot",
+                   # br(),
+                   # selectizeInput(
+                   #   "selected_genes",
+                   #   "Select one or more Gene(s):",
+                   #   choices = gene_choices,
+                   #   selected = "ZNF777",
+                   #   multiple = TRUE,
+                   #   options = list(
+                   #     placeholder = "Type to search for genes...",
+                   #     maxItems = NULL
+                   #   ),
+                   #   width = '1500px'  # or '100%', '50%', etc.
+                   # ),
+                   # br(),
+                   # br(),
+                   # br(),
+                   # br(),
+                   # br(),
+                   # br(),
+                   # br(),
+                   # br(),
+                   # br(),
+                   # br(),
+                   plotlyOutput("labelPlot", height = "700px")
+                 )
+               ),
+               
+               
+             )
+             
+             
+             
+             
+             ),
+    # tabPanel("Navbar 3", "This panel is intentionally left blank")
   ),
   
-  absolutePanel(
-    top = 58, left = 300,
-    HTML("<span style='font-size:15px; color:gray; font-style:italic;'>
-            Data revisualized from Imbeault et al. (2017).
-            <br>DOI:
-            <a href='https://doi.org/10.1038/nature21683' target='_blank' style='color:#8B008B; text-decoration:none;'>
-            https://doi.org/10.1038/nature21683
-            </a>
-            </span>"),
-    style = "z-index: 9999;"  # high z-index ensures it's on top
-  ),
   
   tags$style(HTML("
     #combinedPlot .ytick text,
@@ -99,150 +354,95 @@ ui <- fluidPage(
     div.dataTables_scrollBody::-webkit-scrollbar {
       height: 16px !important;        /* scrollbar thickness */
     }
-  
+
     div.dataTables_scrollBody::-webkit-scrollbar-track {
       background: #e0e0e0 !important; /* track color */
       border-radius: 8px;
     }
-  
+
     div.dataTables_scrollBody::-webkit-scrollbar-thumb {
       background-color: #888 !important;  /* thumb color */
       border-radius: 8px;
       border: 3px solid #e0e0e0;          /* gap padding */
     }
-  
+
     div.dataTables_scrollBody::-webkit-scrollbar-thumb:hover {
       background-color: #555 !important;  /* darker on hover */
     }
-  
+
     /* Firefox scrollbar */
     div.dataTables_scrollBody {
       scrollbar-width: thick;
-      scrollbar-color: #888 #e0e0e0; 
+      scrollbar-color: #888 #e0e0e0;
     }
-    
+
     /* Make scrollbar always visible */
     div.dataTables_scrollBody {
       overflow-x: scroll !important;
     }
-  
+
 
 
   ")),
   
-  
-  
-  
-  tabsetPanel(
-    id = "tabs",
-    type = "tabs",
-    
-    # ---------------------------------------------------
-    # TAB 1: View by Species
-    # ---------------------------------------------------
-    tabPanel(
-      title = "View by Species",
-      br(),
-      selectizeInput(
-        "selected_species",
-        "Select or type species name or common name:",
-        selected = "Mus musculus",
-        choices = setNames(species_choices$Species, species_choices$label),
-        multiple = FALSE,
-        options = list(
-          placeholder = 'Type species or common name...',
-          maxItems = 1
-        ),
-        width = '300px'
-      ),
-      br(),
-      br(),
-      
-      # Two-column layout
-      fluidRow(
-        column(
-          width = 12,    # left side (e.g., plot)
-          uiOutput("dynamicClusterTableUI")
-        ) 
-      ),
-      
-      br(),
-      br(),
-      br(),
-      
-      fluidRow(
-        column(
-          width = 12,
-          plotlyOutput("combinedPlot", height = "8000px")
-        )
-      )
-    ),
-    
-    # ---------------------------------------------------
-    # TAB 2: View by Label / Gene
-    # ---------------------------------------------------
-    tabPanel(
-      title = "View by Gene",
-      br(),
-      selectizeInput(
-        "selected_genes",
-        "Select one or more Gene(s):",
-        choices = gene_choices,
-        selected = "ZNF777",
-        multiple = TRUE,
-        options = list(
-          placeholder = "Type to search for genes...",
-          maxItems = NULL
-        ),
-        width = '1500px'  # or '100%', '50%', etc.
-      ),
-      # br(),
-      # br(),
-      # br(),
-      # br(),
-      # br(),
-      # br(),
-      # br(),
-      # br(),
-      br(),
-      br(),
-      plotlyOutput("labelPlot", height = "700px")
-    )
-  ),
-  
-  # Only show this absolutePanel when on the "View by Species" tab
-  conditionalPanel(
-    condition = "input.tabs == 'View by Species'",
-    
-    absolutePanel(
-      img(src = "kzfp_phylogeny.png", height = "30px"),
-      style = "top: 0%; left: 75%; z-index: 8000; background-color: rgba(255,255,255,0.9); padding: 0px; border-radius: 0px;"
-    ),
-    
-    # Attempt to add static species plot in absolute panel
-    absolutePanel(
-      uiOutput("staticClusterPlotUI"),
-      style = "top: 3%; left: 75%; z-index: 9990; background-color: rgba(255,255,255,0.0); padding: 0px; border-radius: 0px;"
-    ),
-    
-    absolutePanel(
-      uiOutput("speciesInfoPanel"),
-      style = "top: 16%; left: 25%; z-index: 9999; background-color: rgba(255,255,255,0); padding: 0px; border-radius: 2px;"
-    ),
-    
-    uiOutput("speciesImagePanel")
-  ),
-  
-  # Only show this absolutePanel when on the "View by Gene" tab
-  # conditionalPanel(
-  #   condition = "input.tabs == 'View by Gene'",
-  #   
-  #   absolutePanel(
-  #     top = 250, left = 165,
-  #     img(src = "kzfp_phylogeny.png", height = "133px")
-  #   )
-  # )
 )
+
+# Old version
+# ui <- fluidPage(
+#   titlePanel(
+#     ("KZFP Conservation Viewer"),
+#   ),
+# 
+#   absolutePanel(
+#     top = 58, left = 300,
+#     HTML("<span style='font-size:15px; color:gray; font-style:italic;'>
+#             Data revisualized from Imbeault et al. (2017).
+#             <br>DOI:
+#             <a href='https://doi.org/10.1038/nature21683' target='_blank' style='color:#8B008B; text-decoration:none;'>
+#             https://doi.org/10.1038/nature21683
+#             </a>
+#             </span>"),
+#     style = "z-index: 9999;"  # high z-index ensures it's on top
+#   ),
+
+#   
+#   
+#   
+#   
+#   
+#   # Only show this absolutePanel when on the "View by Species" tab
+#   conditionalPanel(
+#     condition = "input.tabs == 'View by Species'",
+#    
+#     absolutePanel(
+#       img(src = "kzfp_phylogeny.png", height = "30px"),
+#       style = "top: 0%; left: 75%; z-index: 8000; background-color: rgba(255,255,255,0.9); padding: 0px; border-radius: 0px;"
+#     ),
+#     
+#     # Attempt to add static species plot in absolute panel
+#     absolutePanel(
+#       uiOutput("staticClusterPlotUI"),
+#       style = "top: 3%; left: 75%; z-index: 9990; background-color: rgba(255,255,255,0.0); padding: 0px; border-radius: 0px;"
+#     ),
+#     
+#     absolutePanel(
+#       uiOutput("speciesInfoPanel"),
+#       style = "top: 16%; left: 25%; z-index: 9999; background-color: rgba(255,255,255,0); padding: 0px; border-radius: 2px;"
+#     ),
+#     
+#     uiOutput("speciesImagePanel")
+#   ),
+#   
+#   # Only show this absolutePanel when on the "View by Gene" tab
+#   # conditionalPanel(
+#   #   condition = "input.tabs == 'View by Gene'",
+#   #   
+#   #   absolutePanel(
+#   #     top = 250, left = 165,
+#   #     img(src = "kzfp_phylogeny.png", height = "133px")
+#   #   )
+#   # )
+# )
 
 # =======================================================
 # SERVER
@@ -296,35 +496,86 @@ server <- function(input, output, session) {
     )
     
     div(
-      style = "width: 600px; max-width: 90%; margin: 0 auto;",  # fixed width + responsive max + centered
+      # style = "width: 600px; max-width: 90%; margin: 0 auto;",  # fixed width + responsive max + centered
       tagList(
-        h2(HTML(paste("KZFP Orthologs for <i>", species_row$Species[1], "</i> — ", species_row$CommonName[1]))),
-        p(strong("Class:"), species_row$Class[1], strong("| Order:"), species_row$Order[1], strong("| Time from Human:"), species_row$timeFromHuman_MY[1], "million years")
+        # h5(HTML(paste("KZFP Orthologs for <i>", species_row$Species[1], "</i> — ", species_row$CommonName[1]))),
+        h5(strong("Class:"), species_row$Class[1], strong("| Order:"), species_row$Order[1], strong("| Time from Human:"), species_row$timeFromHuman_MY[1], "million years")
       )
     )
   })
   
+  # # Species image panel
+  # output$speciesImagePanel <- renderUI({
+  #   req(input$selected_species)
+  #   
+  #   # Construct image filename
+  #   img_file <- paste0(input$selected_species, ".png")
+  #   
+  #   # Check if the file exists in the www/ folder
+  #   # (Shiny serves files from ./www automatically)
+  #   img_path <- file.path("www", img_file)
+  #   if (!file.exists(img_path)) {
+  #     img_file <- "default_species.png"  # fallback image
+  #   }
+  #   
+  #   # Display only on the "View by Species" tab
+  #   if (input$tabs == "View by Species") {
+  #     absolutePanel(
+  #       img(src = img_file, height = "150px"),
+  #       style = "top: 0%; left: 50%; z-index: 6000;"
+  #     )
+  #   }
+  # })
+  ##### logic
   # Species image panel
+  # output$speciesImagePanel <- renderUI({
+  #   req(input$selected_species)
+  #   
+  #   # Construct image filename
+  #   img_file <- paste0(input$selected_species, ".png")
+  #   
+  #   # Check if the file exists in the www/ folder
+  #   # (Shiny serves files from ./www automatically)
+  #   img_path <- file.path("www", img_file)
+  #   if (!file.exists(img_path)) {
+  #     img_file <- "default_species.png"  # fallback image
+  #   }
+  #   
+  #   # Display only on the "View by Species" tab
+  #   if (input$tabs == "View by Species") {
+  #     
+  #     img(src = img_file, height = "150px")
+  #     # style = "top: 0%; left: 50%; z-index: 6000;"
+  # 
+  #   }
+  # })
+  
   output$speciesImagePanel <- renderUI({
     req(input$selected_species)
-    
-    # Construct image filename
-    img_file <- paste0(input$selected_species, ".png")
-    
-    # Check if the file exists in the www/ folder
-    # (Shiny serves files from ./www automatically)
-    img_path <- file.path("www", img_file)
-    if (!file.exists(img_path)) {
-      img_file <- "default_species.png"  # fallback image
-    }
-    
-    # Display only on the "View by Species" tab
-    if (input$tabs == "View by Species") {
-      absolutePanel(
-        img(src = img_file, height = "150px"),
-        style = "top: 0%; left: 50%; z-index: 6000;"
-      )
-    }
+    tags$img(
+      src = paste0(input$selected_species, ".png"),  # file inside www/
+      style = "width: 100%; height: auto;",
+      # height = "250px",
+      style = "display: block; margin: 10px auto;"
+    )
+    # 
+    # 
+    # 
+    # 
+    # req(input$selected_species)
+    # 
+    # if (input$tabs != "View by Species") {
+    #   return(NULL)
+    # }
+    # 
+    # img_file <- paste0(input$selected_species, ".png")
+    # img_path  <- file.path("www", img_file)
+    # 
+    # if (!file.exists(img_path)) {
+    #   img_file <- "default_species.png"
+    # }
+    # 
+    # tags$img(src = img_file, height = "150px")
   })
   
   # Dynamic UI for species table height
@@ -379,7 +630,7 @@ server <- function(input, output, session) {
     df_table <- df_table %>%
       mutate(
         percent_conserved = num_species_w_cluster_associated_with_gene / 191
-      )
+        )
     
     # --- Reorder/select columns ---
     df_display <- df_table %>%
@@ -433,10 +684,10 @@ server <- function(input, output, session) {
     # --- Display as a datatable ---
     DT::datatable(
       df_display,
-      caption = htmltools::tags$caption(
-        style = 'caption-side: top; text-align: left; font-size: 16px; font-weight: bold; color: #333333;',
-        'Table 1: KZFP Ortholog Summary'
-      ),
+      # caption = htmltools::tags$caption(
+      #   style = 'caption-side: top; text-align: left; font-size: 16px; font-weight: bold; color: #333333;',
+      #   'Table 1: KZFP Ortholog Summary'
+      # ),
       
       escape = FALSE,
       rownames = FALSE,
@@ -473,7 +724,15 @@ server <- function(input, output, session) {
     )
   })
   
+
+    
+  
+  
   output$staticClusterPlot <- renderPlot({
+    
+
+    
+    
     df <- filtered_species_data()
     index <- which(df$Species == input$selected_species)
     
@@ -500,6 +759,11 @@ server <- function(input, output, session) {
   
   
   output$combinedPlot <- renderPlotly({
+    compact_mode <- isTRUE(input$show_compact_clustFig)
+    
+    row_heights <- if (compact_mode) c(0.3, 0.7) else c(0.023, 0.977)
+    plot_height  <- if (compact_mode) 450 else 8000
+    
     df_pairs <- df_pairs %>%
       dplyr::rename(
         Gene = Label
@@ -571,9 +835,9 @@ server <- function(input, output, session) {
         ),
         yaxis = list(
           range = c(0, length(label_levels) + 0),
+     
           
-          
-          title = "KZFP Clusters and Associated Genes",
+          # title = "KZFP Clusters and Associated Genes",
           tickfont = list(size = 10),
           automargin = TRUE,
           categoryorder = "array",
@@ -634,8 +898,8 @@ server <- function(input, output, session) {
         xaxis = list(visible = FALSE),
         yaxis = list(visible = FALSE),
         margin = list(t = 20, b = 20, l = 20, r = 20),
-        paper_bgcolor = "rgba(245,245,245,0.95)",
-        plot_bgcolor  = "rgba(245,245,245,0.95)"
+        paper_bgcolor = "rgba(255,255,255,1)",
+        plot_bgcolor  = "rgba(255,255,255,1)"
       )
     
     fig4 <- plot_ly() %>%
@@ -655,38 +919,60 @@ server <- function(input, output, session) {
       )
     
     # -------- COMBINE SIDE BY SIDE, SHARE Y --------
+    # subplot(
+    #   # fig3,
+    #   # fig4,
+    #   # fig1,
+    #   # fig2,
+    #   # nrows  = 2,
+    #   # shareY = TRUE,          # y-axes aligned
+    #   # heights = c(0.023, 0.977),    # 75% height for row 1, 25% for row 2
+    #   # widths = c(0.1, 0.9), # adjust relative widths
+    #   # margin = 0.00
+    #   
+    #   fig4,
+    #   fig3,
+    #   fig2,
+    #   fig1,
+    #   nrows  = 2,
+    #   shareY = TRUE,          # y-axes aligned
+    #   heights = c(0.023, 0.977),    # 75% height for row 1, 25% for row 2
+    #   widths = c(0.8, 0.2), # adjust relative widths
+    #   margin = 0.00
+    #   
+    # ) %>%
+    #   layout(
+    #     title = list(
+    #       text = paste0("KZFP Gene Conservation for ", input$selected_species),
+    #       x = 0,
+    #       xanchor = "left",
+    #       font = list(size = 16)
+    #     ),
+    #     plot_bgcolor = "#fff",
+    #     showlegend = FALSE
+    #     
+    #   )
     subplot(
-      # fig3,
-      # fig4,
-      # fig1,
-      # fig2,
-      # nrows  = 2,
-      # shareY = TRUE,          # y-axes aligned
-      # heights = c(0.023, 0.977),    # 75% height for row 1, 25% for row 2
-      # widths = c(0.1, 0.9), # adjust relative widths
-      # margin = 0.00
-      
       fig4,
       fig3,
       fig2,
       fig1,
       nrows  = 2,
-      shareY = TRUE,          # y-axes aligned
-      heights = c(0.023, 0.977),    # 75% height for row 1, 25% for row 2
-      widths = c(0.8, 0.2), # adjust relative widths
+      shareY = TRUE,
+      heights = row_heights,
+      widths = c(0.8, 0.2),
       margin = 0.00
-      
     ) %>%
       layout(
-        title = list(
-          text = paste0("KZFP Gene Conservation for ", input$selected_species),
-          x = 0,
-          xanchor = "left",
-          font = list(size = 16)
-        ),
+        height = plot_height,
+        # title = list(
+        #   text = paste0("KZFP Gene Conservation for ", input$selected_species),
+        #   x = 0,
+        #   xanchor = "left",
+        #   font = list(size = 16)
+        # ),
         plot_bgcolor = "#fff",
         showlegend = FALSE
-        
       )
   })
   
@@ -868,7 +1154,7 @@ server <- function(input, output, session) {
           range = c(0, length(label_levels) + 0),
           
           
-          title = "KZFP Clusters and Associated Genes",
+          # title = "KZFP Clusters and Associated Genes",
           tickfont = list(size = 10),
           automargin = TRUE,
           categoryorder = "array",
@@ -929,8 +1215,8 @@ server <- function(input, output, session) {
         xaxis = list(visible = FALSE),
         yaxis = list(visible = FALSE),
         margin = list(t = 20, b = 20, l = 20, r = 20),
-        paper_bgcolor = "rgba(245,245,245,0.95)",
-        plot_bgcolor  = "rgba(245,245,245,0.95)"
+        paper_bgcolor = "rgba(255,255,255,1)",
+        plot_bgcolor  = "rgba(255,255,255,1)"
       )
     
     fig4 <- plot_ly() %>%
@@ -973,12 +1259,12 @@ server <- function(input, output, session) {
       
     ) %>%
       layout(
-        title = list(
-          text = paste0("KZFP Gene Conservation for ", input$selected_species),
-          x = 0,
-          xanchor = "left",
-          font = list(size = 16)
-        ),
+        # title = list(
+        #   text = paste0("KZFP Gene Conservation for ", input$selected_species),
+        #   x = 0,
+        #   xanchor = "left",
+        #   font = list(size = 16)
+        # ),
         plot_bgcolor = "#fff",
         showlegend = FALSE
         
